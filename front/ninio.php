@@ -1,4 +1,4 @@
-<?php include_once('html/header.php') ?>
+<?php include('html/header.php') ?>
 
   <main id="main">
 
