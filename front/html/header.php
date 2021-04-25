@@ -48,11 +48,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.php" class="active">Home</a></li>
-          <li><a href="hombre.php" class="">Hombres</a></li>
-          <li><a href="mujer.php" class="">Mujeres</a></li>
-          <li><a href="ninio.php" class="">Niños</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li><a href="index.php" class="<?php echo ($section=="home")?'active':'' ?>">Home</a></li>
+          <li><a href="hombre.php" class="<?php echo ($section=="hombres")?'active':'' ?>">Hombres</a></li>
+          <li><a href="mujer.php" class="<?php echo ($section=="mujeres")?'active':'' ?>">Mujeres</a></li>
+          <li><a href="ninio.php" class="<?php echo ($section=="ninios")?'active':'' ?>">Niños</a></li>
+          <li><a href="contact.php" class="<?php echo ($section=="contact")?'active':'' ?>">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

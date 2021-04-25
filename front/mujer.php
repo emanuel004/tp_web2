@@ -1,4 +1,4 @@
-<?php include('html/header.php') ?>
+<?php  $section="mujer";include('html/header.php'); ?>
 
   <main id="main">
 

@@ -1,4 +1,4 @@
-<?php  include('html/header.php'); ?>
+<?php $section="home"; include('html/header.php'); ?>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
