@@ -390,5 +390,5 @@
 	</section>
 
 	<?php
-	include_once("./include/footer.php")
+	include_once("../include/footer.php")
 	?>
