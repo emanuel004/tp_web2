@@ -1,4 +1,5 @@
 <?php
+$section="blog";
 include("./include/header.php");
 ?>
 
