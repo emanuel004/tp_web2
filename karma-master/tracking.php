@@ -1,6 +1,6 @@
 
 	<?php
-    $section="login";
+    $section="pages";
 	include("./include/header.php");
 	?>
 

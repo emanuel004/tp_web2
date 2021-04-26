@@ -79,7 +79,7 @@
 									<li class="nav-item"><a class="nav-link" href="elements.php">Elements</a></li>
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link <?php echo ($section=="contact")?'active':''?>" href="contact.php">Contact</a></li>
+							<li class="nav-item  <?php echo ($section=="contact")?'active':''?>"><a class="nav-link" href="contact.php">Contact</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
