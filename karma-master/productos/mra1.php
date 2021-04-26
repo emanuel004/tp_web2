@@ -1,6 +1,6 @@
 <?php
 	$section="shop";
-	include("./include/header.php");
+	include("./karma-master/include/header.php");
 	?>
 
 
@@ -330,5 +330,5 @@
 	</section>
 
 	<?php
-	include_once("./include/footer.php")
+	include_once("./karma-master/include/header.php")
 	?>
