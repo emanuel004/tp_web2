@@ -1,4 +1,5 @@
 <?php
+	$section="contact";
 	include("./include/header.php");
 	?>
 

@@ -50,8 +50,8 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-							<li class="nav-item submenu dropdown">
+							<li class="nav-item <?php echo ($section=="home")?'active':''?>"><a class="nav-link" href="index.php">Home</a></li>
+							<li class="nav-item submenu dropdown <?php echo ($section=="shop")?'active':''?>">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Shop</a>
 								<ul class="dropdown-menu">
@@ -62,7 +62,7 @@
 									<li class="nav-item"><a class="nav-link" href="confirmation.php">Confirmation</a></li>
 								</ul>
 							</li>
-							<li class="nav-item submenu dropdown">
+							<li class="nav-item submenu dropdown  <?php echo ($section=="blog")?'active':''?>">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Blog</a>
 								<ul class="dropdown-menu">
@@ -70,7 +70,7 @@
 									<li class="nav-item"><a class="nav-link" href="single-blog.php">Blog Details</a></li>
 								</ul>
 							</li>
-							<li class="nav-item submenu dropdown">
+							<li class="nav-item submenu dropdown <?php echo ($section=="pages")?'active':''?>">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Pages</a>
 								<ul class="dropdown-menu">
@@ -79,7 +79,7 @@
 									<li class="nav-item"><a class="nav-link" href="elements.php">Elements</a></li>
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+							<li class="nav-item"><a class="nav-link <?php echo ($section=="contact")?'active':''?>" href="contact.php">Contact</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>

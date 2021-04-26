@@ -1,5 +1,6 @@
 
 	<?php
+	$section="home";
 	include("./include/header.php");
 	?>
 	<!-- start banner Area -->
