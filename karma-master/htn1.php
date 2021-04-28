@@ -43,7 +43,7 @@
 						<h3>zapatillas Flex Control 4</h3>
 						<h2>$149.99</h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Categoría</span> : Running</a></li>
+							<li><a class="active" href="#"><span>Categoría</span> : Training</a></li>
 							<li><a href="#"><span>Disponibilidad</span> : En Stock</a></li>
 						</ul>
 						<p>Lo mejor para tu outfit deportivo, complementalo con las Zapatillas Nike Flex Control 4, 

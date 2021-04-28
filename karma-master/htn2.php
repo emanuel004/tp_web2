@@ -43,7 +43,7 @@
 						<h3>zapatillas Air Max Alpha Trainer 2</h3>
 						<h2>$149.99</h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Categoría</span> : Running</a></li>
+							<li><a class="active" href="#"><span>Categoría</span> : Training</a></li>
 							<li><a href="#"><span>Disponibilidad</span> : En Stock</a></li>
 						</ul>
 						<p>Nike Air Max Alpha están diseñadas para proporcionar comodidad, 

@@ -43,7 +43,7 @@
 						<h3>Zapatillas Fitbounce</h3>
 						<h2>$139.99</h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Categoría</span> : Running</a></li>
+							<li><a class="active" href="#"><span>Categoría</span> : Training</a></li>
 							<li><a href="#"><span>Disponibilidad</span> : En Stock</a></li>
 						</ul>
 						<p>Sacá a relucir tu versatilidad con estas zapatillas de training adidas. 

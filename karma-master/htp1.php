@@ -43,7 +43,7 @@
 						<h3>Zapatillas Fuse</h3>
 						<h2>$149.99</h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Categoría</span> : Running</a></li>
+							<li><a class="active" href="#"><span>Categoría</span> : Training</a></li>
 							<li><a href="#"><span>Disponibilidad</span> : En Stock</a></li>
 						</ul>
 						<p>Presentamos las elegantes zapatillas de caña baja FUSE. Diseñadas atendiendo a las impresiones de los atletas de PUMA y con lo mejor en cuanto a estabilidad y absorción de impactos. 
