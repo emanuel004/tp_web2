@@ -9,7 +9,7 @@
 		<div class="container">
 			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
-					<h1>Zapatillas Ultraboost 21</h1>
+					<h1>Zapatillas Nike Runallday 2</h1>
 					<nav class="d-flex align-items-center">
 						<a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
 						<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
@@ -28,27 +28,28 @@
 				<div class="col-lg-6">
 					<div class="s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/mra1.jpg" alt="">
+							<img class="img-fluid" src="img/product-details/hrn2.jpg" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/mra1.jpg" alt="">
+							<img class="img-fluid" src="img/product-details/hrn2.jpg" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/mra1.jpg" alt="">
+							<img class="img-fluid" src="img/product-details/hrn2.jpg" alt="">
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
-						<h3>Zapatillas Ultraboost 21</h3>
+						<h3>Zapatillas Runallday 2</h3>
 						<h2>$149.99</h2>
 						<ul class="list">
 							<li><a class="active" href="#"><span>Categoría</span> : Running</a></li>
 							<li><a href="#"><span>Disponibilidad</span> : En Stock</a></li>
 						</ul>
-						<p>MPrototipo tras prototipo. Innovación tras innovación. Prueba tras prueba.
-						 Uníte a nosotros en la busqueda constante de maximizar y armonizar el peso, la comodidad y en rendimiento. 
-						 Ultraboost 21. Descubrí un retorno de energía increíble.</p>
+						<p>La zapatilla Nike Run All Day 2 está confeccionada para brindar apoyo.
+						 La tracción debajo del pie ayuda a mantenerte firme, sin importar cuántos kilómetros corras. 
+						 Creada para runners eventuales. La amortiguación con espuma proporciona una sensación de suavidad debajo del pie. 
+						Un mayor espesor de la suela ofrece una sensación de aún mayor suavidad para que puedas correr cómodamente.</p>
 						<div class="product_count">
 							<label for="qty">Cantidad:</label>
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
@@ -89,10 +90,18 @@
 							<tbody>
 								<tr>
 									<td>
+										<h5>Marca:</h5>
+									</td>
+									<td>
+										<h5>Nike</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
 										<h5>Peso</h5>
 									</td>
 									<td>
-										<h5>340 g</h5>
+										<h5>335 g</h5>
 									</td>
 								</tr>
 								<tr>
@@ -100,7 +109,7 @@
 										<h5>Suela</h5>
 									</td>
 									<td>
-										<h5>Stretchweb con caucho Continental</h5>
+										<h5>FOAM - INJECTION UNITSOLE</h5>
 									</td>
 								</tr>
 								<tr>
@@ -117,55 +126,6 @@
 				</div>
 				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 					<div class="row">
-						<div class="col-lg-6">
-							<div class="comment_list">
-								<div class="review_item">
-									<div class="media">
-										<div class="d-flex">
-											<img src="img/product/review-1.png" alt="">
-										</div>
-										<div class="media-body">
-											<h4>Blake Ruiz</h4>
-											<h5>12th Feb, 2018 at 05:56 pm</h5>
-											<a class="reply_btn" href="#">Reply</a>
-										</div>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
-								</div>
-								<div class="review_item reply">
-									<div class="media">
-										<div class="d-flex">
-											<img src="img/product/review-2.png" alt="">
-										</div>
-										<div class="media-body">
-											<h4>Blake Ruiz</h4>
-											<h5>12th Feb, 2018 at 05:56 pm</h5>
-											<a class="reply_btn" href="#">Reply</a>
-										</div>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
-								</div>
-								<div class="review_item">
-									<div class="media">
-										<div class="d-flex">
-											<img src="img/product/review-3.png" alt="">
-										</div>
-										<div class="media-body">
-											<h4>Blake Ruiz</h4>
-											<h5>12th Feb, 2018 at 05:56 pm</h5>
-											<a class="reply_btn" href="#">Reply</a>
-										</div>
-									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
-								</div>
-							</div>
-						</div>
 						<div class="col-lg-6">
 							<div class="review_box">
 								<h4>Post a comment</h4>
@@ -242,9 +202,7 @@
 											<i class="fa fa-star"></i>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>El Producto Llegó Rápido a provincia y cumplió todas mis espectativas. Gracias.</p>
 								</div>
 								<div class="review_item">
 									<div class="media">
@@ -252,7 +210,7 @@
 											<img src="img/product/review-2.png" alt="">
 										</div>
 										<div class="media-body">
-											<h4>Blake Ruiz</h4>
+											<h4>Carlos Martinez</h4>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
@@ -260,9 +218,7 @@
 											<i class="fa fa-star"></i>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>Es un calzado ultra cómodo, no solo para correr sino para andar de diario.</p>
 								</div>
 								<div class="review_item">
 									<div class="media">
@@ -270,7 +226,7 @@
 											<img src="img/product/review-3.png" alt="">
 										</div>
 										<div class="media-body">
-											<h4>Blake Ruiz</h4>
+											<h4>Jorge Perez</h4>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
@@ -278,9 +234,8 @@
 											<i class="fa fa-star"></i>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>Si vas a usar este calzado para lifestyle pide tu talla normal. 
+									Si es para correr pide media talla arriba para tener suficiente espacio en el toebox.</p>
 								</div>
 							</div>
 						</div>
@@ -330,5 +285,5 @@
 	</section>
 
 	<?php
-	include_once("./include/footer.php")
+	include_once("./include/footer.php");
 	?>
