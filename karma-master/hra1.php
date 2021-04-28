@@ -123,6 +123,8 @@
 						</table>
 					</div>
 				</div>
+				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+					<div class="row">
 						<div class="col-lg-6">
 							<div class="review_box">
 								<h4>Post a comment</h4>
