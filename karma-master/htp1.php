@@ -28,13 +28,13 @@
 				<div class="col-lg-6">
 					<div class="s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/hta1.jpg" alt="">
+							<img class="img-fluid" src="img/product-details/htp1.jpg" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/hta1.jpg" alt="">
+							<img class="img-fluid" src="img/product-details/htp1.jpg" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/hta1.jpg" alt="">
+							<img class="img-fluid" src="img/product-details/htp1.jpg" alt="">
 						</div>
 					</div>
 				</div>
