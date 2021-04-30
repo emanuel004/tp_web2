@@ -1,5 +1,6 @@
 
 	<?php
+    $section="pages";
 	include("./include/header.php");
 	?>
 

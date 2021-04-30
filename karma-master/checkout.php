@@ -1,4 +1,5 @@
 <?php
+$section="shop";
 include("./include/header.php");
 ?>
 
