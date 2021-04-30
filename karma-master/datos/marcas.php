@@ -14,7 +14,7 @@ $marcas = array(
     ),
     "4" => array(
         "Id" => 4,
-        "nombre" => "Addidas"
+        "nombre" => "Reebook"
     ),
 );
 
