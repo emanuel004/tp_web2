@@ -11,11 +11,7 @@ $marcas = array(
     "3" => array(
         "Id" => 3,
         "nombre" => "Puma"
-    ),
-    "4" => array(
-        "Id" => 4,
-        "nombre" => "Addidas"
-    ),
+    )
 );
 
 ?>
