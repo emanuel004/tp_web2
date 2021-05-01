@@ -1,4 +1,4 @@
-<?php>
+<?php
 $comentarios = array( 
     "1" => array(
             "ID" => 1,	    
@@ -86,5 +86,5 @@ $comentarios = array(
             ),
 
 );
-
+json_encode($categoria);
 ?>

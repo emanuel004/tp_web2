@@ -1,3 +1,4 @@
+<?php
 $categoria = array( 
     "1" => array(
             "Id" => 1,	    
@@ -5,10 +6,13 @@ $categoria = array(
             ),
     "2" => array(
             "Id" => 2,
-            "nombre" => "Rinning",
+            "nombre" => "Running",
             ),
     "3" => array(
             "Id" => 3,
             "nombre" => "Trainnig",
             )
 );
+
+json_encode($categoria);
+?>
