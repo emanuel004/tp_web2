@@ -524,7 +524,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
 	<!-- end product Area -->
 
 	<!-- Start exclusive deal Area -->
@@ -558,7 +558,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="" class="primary-btn">Shop Now</a>
+					<a href="category.php" class="primary-btn">Shop Now</a>
 				</div>
 				<div class="col-lg-6 no-padding exclusive-right">
 					<div class="active-exclusive-product-slider">

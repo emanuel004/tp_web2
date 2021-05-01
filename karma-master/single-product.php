@@ -12,7 +12,7 @@
 					<h1>Product Details Page</h1>
 					<nav class="d-flex align-items-center">
 						<a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-						<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
+						<a href="category.php">Shop<span class="lnr lnr-arrow-right"></span></a>
 						<a href="single-product.php">product-details</a>
 					</nav>
 				</div>
@@ -23,7 +23,8 @@
 
 	<!-- star contenido Area -->
 		<?php 
-			$rutacompleta = "producto-detalles/hra1.php" ;
+			$id =  htmlspecialchars($_GET['id']);
+			$rutacompleta = "producto-detalles/" . $id;
 			include($rutacompleta); 
 		?>
 	<!-- End contenido Area -->

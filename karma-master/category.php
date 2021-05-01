@@ -40,6 +40,7 @@ include("include/header.php");
 						<div class="head">Marcas</div>
 						<form action="#">
 							<ul>
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Todo<span>(29)</span></label></li>
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Addidas<span>(29)</span></label></li>
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Puma<span>(29)</span></label></li>
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Nike<span>(19)</span></label></li>
@@ -50,6 +51,7 @@ include("include/header.php");
 						<div class="head">Genero</div>
 						<form action="#">
 							<ul>
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Todo<span>(29)</span></label></li>
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Zapatillas<span>(29)</span></label></li>
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Running<span>(29)</span></label></li>
 								<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Trainning<span>(19)</span></label></li>
@@ -89,7 +91,7 @@ include("include/header.php");
 										<h6 class="l-through">$210.00</h6>
 									</div>
 									<div class="prd-bottom">
-										<a id ="hra1.jpg" href="single-product.php" class="social-info">
+										<a  href="single-product.php?id=hra1.php" class="social-info">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">detalles</p>
 										</a>
@@ -100,7 +102,7 @@ include("include/header.php");
 						<!-- single product -->
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
-								<img class="img-fluid" src="img/product/p2.jpg" alt="">
+								<img class="img-fluid" src="img/product-details/hra2.jpg" alt="">
 								<div class="product-details">
 									<h6>addidas New Hammer sole
 										for Sports person</h6>
@@ -109,7 +111,7 @@ include("include/header.php");
 										<h6 class="l-through">$210.00</h6>
 									</div>
 									<div class="prd-bottom">
-										<a href="single-product.php" class="social-info">
+										<a href="single-product.php?id=hra2.php" class="social-info">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">detalle</p>
 										</a>
