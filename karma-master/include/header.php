@@ -52,7 +52,7 @@
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item <?php echo ($section=="home")?'active':''?>"><a class="nav-link" href="index.php">Home</a></li>
 							<li class="nav-item <?php echo ($section=="shop")?'active':''?>"><a class="nav-link" href="category.php">Shop Category</a></li>
-							<li class="nav-item <?php echo ($section=="pages")?'active':''?>"><a class="nav-link" href="login.php">Login</a></li>
+							<li class="nav-item <?php echo ($section=="pages")?'active':''?>"><a class="nav-link" href="/sistema/index.php">Login</a></li>
 							<li class="nav-item  <?php echo ($section=="contact")?'active':''?>"><a class="nav-link" href="contact.php">Contact</a></li>
 						</ul>
 					</div>
