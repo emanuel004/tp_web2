@@ -3,6 +3,16 @@ $section = "contact";
 include("./include/header.php");
 ?>
 
+<div class="modal_wrap">
+	<div class="mensaje_modal">
+		<h3>Errores encontrados</h3>
+		<span id="btnClose">Cerrar</span>
+		<p>Escriba un nombre</p>
+		<p>Ingrese un correo</p>
+		<p>Escriba un mensaje</p>
+	</div>
+</div>
+
 
 <!-- Start Banner Area -->
 <section class="banner-area organic-breadcrumb">
@@ -57,6 +67,7 @@ include("./include/header.php");
 						<div class="form-group">
 							<input type="text" class="form-control" id="subject" name="telefono" placeholder="Telefono" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefono'" required>
 						</div>
+
 
 						<div class="form-group">
 							<input type="text" class="form-control" id="subject" name="tipo_consulta" placeholder="Reclamo/Sugerencia" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Reclamo/Sugerencia'" required>
