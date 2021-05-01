@@ -1,4 +1,4 @@
-<?php>
+<?php
 $producto = array( 
     "1" => array(
             "ID" => 1,	    
@@ -142,5 +142,5 @@ $producto = array(
             ),
 
 );
-
+json_encode($categoria);
 ?>

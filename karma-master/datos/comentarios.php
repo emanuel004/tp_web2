@@ -1,4 +1,4 @@
-<?php>
+<?php
 $comentarios = array( 
     "1" => array(
             "ID" => 1,	    
@@ -9,13 +9,20 @@ $comentarios = array(
             ),
     "2" => array(
             "ID" => 2,	    
-            "Nombre" => "h",
-            "IdProducto" =>	 ""   
+            "Nombre" => "Jorge Perez",
+            "Email" => "Jorge@gmial.com",
+            "IdProducto" => "hra1" ,
+            "Puntuación" => "5",
+            "Comentario" => "Si vas a usar este calzado para lifestyle pide tu talla normal. 
+            Si es para correr pide media talla arriba para tener suficiente espacio en el toebox." 
             ),
     "3" => array(
             "ID" => 3,	    
-            "Nombre" => "h",
-            "IdProducto" =>	  ""  
+            "Nombre" => "Carlos Martinez",
+            "Email" => "Carlos@gmial.com",
+            "IdProducto" => "hra3" ,
+            "Puntuación" => "4",
+            "Comentario" => "Es un calzado ultra cómodo, no solo para correr sino para andar de diario." 
             ),
     "4" => array(
             "ID" => 4,	    
@@ -88,5 +95,5 @@ $comentarios = array(
             ),
 
 );
-
+json_encode($categoria);
 ?>
