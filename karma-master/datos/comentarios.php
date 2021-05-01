@@ -2,8 +2,10 @@
 $comentarios = array( 
     "1" => array(
             "ID" => 1,	    
-            "Nombre" => "h",
-            "IdProducto" => ""      
+            "Nombre" => "Blake Ruiz",
+            "IdProducto" => "mra2",
+            "Puntuacion" => "5",
+            "Comentario" => "El Producto Llegó Rápido a provincia y cumplió todas mis espectativas. Gracias."      
             ),
     "2" => array(
             "ID" => 2,	    
