@@ -68,6 +68,7 @@ include("./include/header.php");
 							<input type="text" class="form-control" id="subject" name="telefono" placeholder="Telefono" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefono'" required>
 						</div>
 
+
 						<div class="form-group">
 							<input type="text" class="form-control" id="subject" name="tipo_consulta" placeholder="Reclamo/Sugerencia" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Reclamo/Sugerencia'" required>
 						</div>
