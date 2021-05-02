@@ -2,87 +2,87 @@
 $producto = array( 
     "1" => array(
             "ID" => 1,	    
-            "Nombre" => "h",
-            "Precio" =>"",
-            "Idcategoria" =>"",    
+            "Nombre" => "Zapatillas Ultraboost 21",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"1",    
             "IdMarca" => 1	    
             ),
     "2" => array(
             "ID" => 2,	    
-            "Nombre" => "",
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 2	    
+            "Nombre" => "Zapatillas Galaxy 5",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"1",	    
+            "IdMarca" => 1	    
             ),
     "3" => array(
             "ID" => 3,	    
-            "Nombre" => "",
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 3	    
+            "Nombre" => "Zapatillas Infinity Run",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"1",	    
+            "IdMarca" => 2	    
             ),
     "4" => array(
             "ID" => 4,	    
-            "Nombre" => "",
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 1	    
+            "Nombre" => "Zapatillas Joyride",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"1",	    
+            "IdMarca" => 2	    
             ),
      "5" => array(
             "ID" => 5,	    
-            "Nombre" => "",
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
+            "Nombre" => "Zapatillas Deviate Nitro",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"1",	    
             "IdMarca" => 3	    
             ),
     "6" => array(
             "ID" => 6,	    
-            "Nombre" =>"" ,
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 1	    
+            "Nombre" =>"Zapatillas Calibrate Luxe" ,
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"1",	    
+            "IdMarca" => 3	    
             ),
      "7" => array(
             "ID" => 7,	    
-            "Nombre" => "",
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 2	    
+            "Nombre" => "Zapatillas Novamotion",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"2",	    
+            "IdMarca" => 1	    
             ),
      "8" => array(
             "ID" => 8,	    
-            "Nombre" => "",
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 2	    
+            "Nombre" => "Zapatillas Novamotion +",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"2",	    
+            "IdMarca" => 1	    
             ),
     "9" => array(
             "ID" => 9,	    
-            "Nombre" =>"" ,
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 4	    
+            "Nombre" =>"Zapatillas Air Max Bella" ,
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"2",	    
+            "IdMarca" => 2	    
             ),
     "10" => array(
             "ID" => 10,	    
-            "Nombre" =>"" ,
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
+            "Nombre" =>"Zapatillas Zoom Gravity" ,
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"2",	    
             "IdMarca" => 2	    
             ),
     "11" => array(
             "ID" => 11,	    
-            "Nombre" => "",
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 1	    
+            "Nombre" => "Zapatillas Provoke XT Untamed Floral",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"2",	    
+            "IdMarca" => 3	    
             ),
      "12" => array(
             "ID" => 12,	    
-            "Nombre" => "",
-            "Precio" =>"",
-            "Idcategoria" =>"",	    
-            "IdMarca" => 4	    
+            "Nombre" => "Zapatillas Provoke XT Untamed",
+            "Precio" =>"$149.99",
+            "Idcategoria" =>"2",	    
+            "IdMarca" => 3	    
             ),
     "13" => array(
             "ID" => 13,	    
