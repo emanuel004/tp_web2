@@ -196,19 +196,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -229,19 +216,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -263,18 +237,6 @@
 								</div>
 								<div class="prd-bottom">
 									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
 									</a>
@@ -294,19 +256,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -327,19 +276,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -360,19 +296,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -393,19 +316,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -426,19 +336,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -476,19 +373,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -509,19 +393,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -542,19 +413,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -575,19 +433,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -608,19 +453,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -641,19 +473,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -674,19 +493,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -707,19 +513,6 @@
 									<h6 class="l-through">$210.00</h6>
 								</div>
 								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">add to bag</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
@@ -731,7 +524,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
 	<!-- end product Area -->
 
 	<!-- Start exclusive deal Area -->
@@ -765,7 +558,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="" class="primary-btn">Shop Now</a>
+					<a href="category.php" class="primary-btn">Shop Now</a>
 				</div>
 				<div class="col-lg-6 no-padding exclusive-right">
 					<div class="active-exclusive-product-slider">
@@ -779,10 +572,6 @@
 								</div>
 								<h4>addidas New Hammer sole
 									for Sports person</h4>
-								<div class="add-bag d-flex align-items-center justify-content-center">
-									<a class="add-btn" href=""><span class="ti-bag"></span></a>
-									<span class="add-text text-uppercase">Add to Bag</span>
-								</div>
 							</div>
 						</div>
 						<!-- single exclusive carousel -->
@@ -795,10 +584,6 @@
 								</div>
 								<h4>addidas New Hammer sole
 									for Sports person</h4>
-								<div class="add-bag d-flex align-items-center justify-content-center">
-									<a class="add-btn" href=""><span class="ti-bag"></span></a>
-									<span class="add-text text-uppercase">Add to Bag</span>
-								</div>
 							</div>
 						</div>
 					</div>

@@ -3,24 +3,6 @@
 	include("./include/header.php");
 	?>
 
-
-	<!-- Start Banner Area -->
-	<section class="banner-area organic-breadcrumb">
-		<div class="container">
-			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-				<div class="col-first">
-					<h1>Zapatillas Adidas Ultraboost 21</h1>
-					<nav class="d-flex align-items-center">
-						<a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-						<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
-						<a href="single-product.php">product-details</a>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Banner Area -->
-
 	<!--================Single Product Area =================-->
 	<div class="product_image_area">
 		<div class="container">
@@ -49,19 +31,6 @@
 						<p>Prototipo tras prototipo. Innovación tras innovación. Prueba tras prueba.
 						 Uníte a nosotros en la busqueda constante de maximizar y armonizar el peso, la comodidad y en rendimiento. 
 						 Ultraboost 21. Descubrí un retorno de energía increíble.</p>
-						<div class="product_count">
-							<label for="qty">Cantidad:</label>
-							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-							 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-						</div>
-						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Agregar al carrito</a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
-						</div>
 					</div>
 				</div>
 			</div>
