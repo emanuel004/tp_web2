@@ -142,5 +142,5 @@ $producto = array(
             ),
 
 );
-json_encode($categoria);
+json_encode($producto);
 ?>

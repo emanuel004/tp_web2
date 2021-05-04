@@ -95,5 +95,5 @@ $comentarios = array(
             ),
 
 );
-json_encode($categoria);
+json_encode($comentarios);
 ?>
