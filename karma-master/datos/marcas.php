@@ -2,7 +2,7 @@
 $marcas = array( 
     "1" => array(
         "Id" => 1,
-        "nombre" => "Addidas"
+        "nombre" => "Adidas"
     ),
     "2" => array(
         "Id" => 2,
@@ -13,5 +13,5 @@ $marcas = array(
         "nombre" => "Puma"
     )
 );
-
+json_encode($categoria);
 ?>
