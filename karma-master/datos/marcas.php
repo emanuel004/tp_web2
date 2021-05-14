@@ -13,5 +13,5 @@ $marcas = array(
         "nombre" => "Puma"
     )
 );
-json_encode($categoria);
+echo json_encode($marcas);
 ?>
