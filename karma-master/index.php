@@ -188,6 +188,7 @@
 					<?php
 							$prod = json_decode(file_get_contents('datos/productos.json'),TRUE);
 							$contador = 0;
+							shuffle($prod);
 							foreach($prod as $producto){
 								$contador = $contador + 1;
 								if ($contador == 5){ break;}
@@ -230,9 +231,17 @@
 				</div>
 				<div class="row">
 					<!-- single product -->
+					<?php
+							$prod = json_decode(file_get_contents('datos/productos.json'),TRUE);
+							$contador = 0;
+							shuffle($prod);
+							foreach($prod as $producto){
+								$contador = $contador + 1;
+								if ($contador == 5){ break;}
+					?>
 					<div class="col-lg-3 col-md-6">
 						<div class="single-product">
-							<img class="img-fluid" src="img/product/p6.jpg" alt="">
+							<img class="img-fluid" src="img/product-details/<?php echo $producto['imagen'] ?>" alt="">
 							<div class="product-details">
 								<h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -249,6 +258,7 @@
 							</div>
 						</div>
 					</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

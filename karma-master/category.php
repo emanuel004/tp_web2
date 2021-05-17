@@ -81,7 +81,9 @@ include("include/header.php");
 						<!-- single product -->
 						<?php
 							$prod = json_decode(file_get_contents('datos/productos.json'),TRUE);
+							shuffle($prod);
 							foreach($prod as $producto){
+								$img = substr($producto['imagen'],0,5) . 'php';
 						?>
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
@@ -92,7 +94,7 @@ include("include/header.php");
 										<h6><?php echo $producto['Precio'] ?></h6>
 									</div>
 									<div class="prd-bottom">
-										<a  href="single-product.php?id=hra1.php" class="social-info">
+										<a  href="single-product.php?id=<?php echo $img ?>" class="social-info">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">detalles</p>
 										</a>
