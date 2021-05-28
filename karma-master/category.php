@@ -83,7 +83,7 @@ include("include/header.php");
 							$prod = json_decode(file_get_contents('datos/productos.json'),TRUE);
 							shuffle($prod);
 							foreach($prod as $producto){
-								$img = substr($producto['imagen'],0,5) . 'php';
+								$img = $producto['imagen'];
 						?>
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
