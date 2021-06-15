@@ -84,7 +84,8 @@
 						<?php
 							$coment = json_decode(file_get_contents('datos/comentarios.json'),TRUE);
 							foreach($coment as $comentario){
-								if($comentario['IdProducto'] == substr($_GET['id'],0,4)){
+								$posicion = strpos($_GET['id'],".",0);
+								if($comentario['IdProducto'] == substr($_GET['id'],0,$posicion)){
 						?>
 							<div class="review_list">
 								<div class="review_item">
@@ -106,14 +107,26 @@
 								<h4>Add a Review</h4>
 								<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
 									<div class="col-md-12">
-									<div class="form-group">
-										<select name="combo">
-    									<!-- Opciones de la lista -->
-    										<option value="1">Opción 1</option>
-    										<option value="2">Opción 2</option> <!-- Opción por defecto -->
-    										<option value="3">Opción 3</option>
-  										</select>
-									</div>
+										<div class="form-check form-check-inline">
+  											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  											<label class="form-check-label" for="inlineCheckbox1">1</label>
+										</div>
+										<div class="form-check form-check-inline">
+  											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  											<label class="form-check-label" for="inlineCheckbox2">2</label>
+										</div>
+										<div class="form-check form-check-inline">
+  											<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+  											<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+										</div>
+										<div class="form-check form-check-inline">
+  											<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+  											<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+										</div>
+										<div class="form-check form-check-inline">
+  											<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+  											<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
@@ -123,11 +136,6 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="number" name="number" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'">
 										</div>
 									</div>
 									<div class="col-md-12">
