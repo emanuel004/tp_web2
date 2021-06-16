@@ -1,7 +1,3 @@
-<?php
-	$section="shop";
-	include("./include/header.php");
-	?>
 
 	<!--================Single Product Area =================-->
 	<div class="product_image_area">
@@ -251,7 +247,3 @@
 			</div>
 		</div>
 	</section>
-
-	<?php
-	include_once("./include/footer.php")
-	?>
