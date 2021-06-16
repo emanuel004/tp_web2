@@ -13,5 +13,6 @@ $marcas = array(
         "nombre" => "Puma"
     )
 );
-json_encode($marcas);
+
+echo json_encode($marcas);
 ?>
