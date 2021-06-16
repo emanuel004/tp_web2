@@ -26,12 +26,15 @@ include("include/header.php");
 				<div class="sidebar-filter mt-50">
 					<div class="top-filter-head">Product Filters</div>
 					<div class="common-filter">
-						<div class="head">Para</div>
+						<div class="head">Zapatillas</div>
 						<form action="#">
 							<ul>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Todo<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Mujer<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Hombre<span>(19)</span></label></li>
+								<?php 
+								$cat = json_decode(file_get_contents('datos/categoria.json'),TRUE);
+								foreach($cat as $cate){?>
+									<li class="filter-list"><a href="category.php?categoria=<?php echo $cate['Id'] ?>&marca=<?php echo (isset($_GET['marca']))?$_GET['marca']:""; ?>"><?php echo $cate['nombre'] ?></a></li>
+								<?php } ?>
+								<li class="filter-list"><a href="category.php?categoria=&marca=<?php echo (isset($_GET['marca']))?$_GET['marca']:""; ?>">Todas</a></li>
 							</ul>
 						</form>
 					</div>
@@ -39,12 +42,14 @@ include("include/header.php");
 						<div class="head">Marcas</div>
 						<form action="#">
 							<ul>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Todo<span>(29)</span></label></li>
 							<?php 
 							$marc = json_decode(file_get_contents('datos/marcas.json'),TRUE);
 							foreach($marc as $marca){?>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple"><?php echo $marca['nombre'] ?></label></li>
+								<li class="filter-list"><a href="category.php?marca=<?php echo $marca['Id']?>&categoria=<?php echo (isset($_GET['categoria']))?$_GET['categoria']:""; ?>">
+								<?php echo $marca['nombre'] ?>
+								</a></li>
 							<?php } ?>
+							<li class="filter-list"><a href="category.php?marca=&categoria=<?php echo (isset($_GET['categoria']))?$_GET['categoria']:""; ?>">Todas</a></li>
 							</ul>
 						</form>
 					</div>
@@ -83,26 +88,39 @@ include("include/header.php");
 							$prod = json_decode(file_get_contents('datos/productos.json'),TRUE);
 							shuffle($prod);
 							foreach($prod as $producto){
-								$img = $producto['imagen'];
+								$posicion = strpos($producto['imagen'],".",0);
+								$img = substr($producto['imagen'],0,$posicion);
+
+								$print = true;
+					
+								if(!empty($_GET['categoria']) AND $print){
+									if($producto['Idcategoria'] != $_GET['categoria']) $print = FALSE;
+								}
+							
+								if(!empty($_GET['marca']) AND $print){
+									if($producto['IdMarca'] != $_GET['marca']) $print = FALSE;
+								}
+							
+								if($print){
 						?>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product-details/<?php echo $producto['imagen'] ?>" alt="">
-								<div class="product-details">
-									<h6><?php echo $producto['Nombre'] ?></h6>
-									<div class="price">
-										<h6><?php echo $producto['Precio'] ?></h6>
-									</div>
-									<div class="prd-bottom">
-										<a  href="single-product.php?id=<?php echo $img ?>" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">detalles</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div> 
-						<?php } ?>
+									<div class="col-lg-4 col-md-6">
+										<div class="single-product">
+											<img class="img-fluid" src="img/product-details/<?php echo $producto['imagen'] ?>" alt="">
+											<div class="product-details">
+												<h6><?php echo $producto['Nombre'] ?></h6>
+												<div class="price">
+													<h6><?php echo $producto['Precio'] ?></h6>
+												</div>
+												<div class="prd-bottom">
+													<a  href="single-product.php?id=<?php echo $producto['ID'] ?>&producto=<?php echo $img ?>" class="social-info">
+														<span class="lnr lnr-move"></span>
+														<p class="hover-text">detalles</p>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div> 
+						<?php } }?>
 					</div>
 				</section>
 				<!-- End Best Seller -->

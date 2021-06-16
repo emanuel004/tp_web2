@@ -1,9 +1,17 @@
 <?php
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
 	$section="shop";
-	include("./include/header.php");
-	?>
-
-
+	include_once('include/header.php');
+	include_once('Business/comentariosBusiness.php');
+	
+	//de esta forma recibe el port
+	if(isset($_POST['submitCom'])){ 
+		var_dump($_POST);
+		businessGuardarComentario($_POST);
+	}
+?>
 	<!-- Start Banner Area -->
 	<section class="banner-area organic-breadcrumb">
 		<div class="container">
@@ -23,14 +31,7 @@
 
 	<?php 
 		$product = json_decode(file_get_contents('datos/productos.json'),TRUE);
-		$nombreP;
-		$precioP;
-		foreach($product as $producto){
-			if ($producto['imagen'] == $_GET['id']) {
-				$nombreP = $producto['Nombre'];
-				$precioP = $producto['Precio'];
-			}
-		} 
+		$p = $product[$_GET['id']];
 	?>
 
 	<!--================Single Product Area =================-->
@@ -40,20 +41,20 @@
 				<div class="col-lg-6">
 					<div class="s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/<?php echo $_GET['id']?>" alt="">
+							<img class="img-fluid" src="img/product-details/<?php echo $p['imagen']?>" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/<?php echo $_GET['id']?>" alt="">
+							<img class="img-fluid" src="img/product-details/<?php echo $p['imagen']?>" alt="">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product-details/<?php echo $_GET['id']?>" alt="">
+							<img class="img-fluid" src="img/product-details/<?php echo $p['imagen']?>" alt="">
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
-						<h3><?php echo $nombreP?></h3>
-						<h2><?php echo $precioP?></h2>
+						<h3><?php echo $p['Nombre']?></h3>
+						<h2><?php echo $p['Precio']?></h2>
 						<ul class="list">
 							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
 							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
@@ -82,69 +83,73 @@
 					<div class="row">
 						<div class="col-lg-6">
 						<?php
-							$coment = json_decode(file_get_contents('datos/comentarios.json'),TRUE);
+							$coment = businessObtenerComentarios();
+							krsort($coment);
 							foreach($coment as $comentario){
-								$posicion = strpos($_GET['id'],".",0);
-								if($comentario['IdProducto'] == substr($_GET['id'],0,$posicion)){
+								if($comentario['IdProducto'] == $_GET['producto']){
 						?>
-							<div class="review_list">
-								<div class="review_item">
-									<div class="media">
-										<div class="d-flex">
-											<img src="img/product/review-1.png" alt="">
-										</div>
-										<div class="media-body">
-											<h4><?php echo $comentario['Nombre'] ?></h4>
+									<div class="review_list">
+										<div class="review_item">
+											<div class="media">
+												<div class="d-flex"><img src="img/product/review-1.png" alt=""></div>
+												<div class="media-body"><h4><?php echo $comentario['Nombre'] ?></h4></div>
+											</div>
+											<p><?php echo $comentario['Comentario'] ?></p>
 										</div>
 									</div>
-									<p><?php echo $comentario['Comentario'] ?></p>
-								</div>
-							</div>	
-						<?php }} ?>
+								<?php } ?>
+							<?php } ?>
 						</div>
 						<div class="col-lg-6">
 							<div class="review_box">
 								<h4>Add a Review</h4>
-								<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+								<form class="row contact_form" action="" method="post" id="contactForm" novalidate="novalidate">
 									<div class="col-md-12">
 										<div class="form-check form-check-inline">
-  											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  											<label class="form-check-label" for="inlineCheckbox1">1</label>
+  											<input class="form-check-input" type="checkbox" name="inlineCheckbox1" value="1">
+  											<label class="form-check-label" for="Puntuacion">1</label>
 										</div>
 										<div class="form-check form-check-inline">
-  											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  											<input class="form-check-input" type="checkbox" name="Puntuacion" value="2">
   											<label class="form-check-label" for="inlineCheckbox2">2</label>
 										</div>
 										<div class="form-check form-check-inline">
-  											<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-  											<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  											<input class="form-check-input" type="checkbox" name="Puntuacion" value="3">
+  											<label class="form-check-label" for="inlineCheckbox3">3</label>
 										</div>
 										<div class="form-check form-check-inline">
-  											<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-  											<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  											<input class="form-check-input" type="checkbox" name="Puntuacion" value="4">
+  											<label class="form-check-label" for="inlineCheckbox3">4</label>
 										</div>
 										<div class="form-check form-check-inline">
-  											<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-  											<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  											<input class="form-check-input" type="checkbox" name="Puntuacion" value="5">
+  											<label class="form-check-label" for="inlineCheckbox3" >5</label>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<input type="text" class="form-control" id="name" name="name" placeholder="Your Full name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Full name'">
+											<input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Your Full name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Full name'">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+											<input type="email" class="form-control" id="Email" name="Email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<textarea class="form-control" name="message" id="message" rows="1" placeholder="Review" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'"></textarea></textarea>
+											<textarea class="form-control" name="Comentario" id="Comentario" rows="1" placeholder="Review" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'"></textarea></textarea>
 										</div>
 									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+										<input name="IdProducto" value="<?php echo $_GET['producto']?>"><br>
+										<input name="IdProducto" value="<?php echo $comentario['IdProducto']?>"><br>
+										</div>
+									</div>
+									
 									<div class="col-md-12 text-right">
-										<button type="submit" value="submit" class="primary-btn">Submit Now</button>
+										<button type="submit" name="submitCom" class="primary-btn">Submit Now</button>
 									</div>
 								</form>
 							</div>
