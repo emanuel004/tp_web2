@@ -8,7 +8,7 @@
 	
 	//de esta forma recibe el port
 	if(isset($_POST['submitCom'])){ 
-		var_dump($_POST);
+		//var_dump($_POST);
 		businessGuardarComentario($_POST);
 	}
 ?>
@@ -59,9 +59,7 @@
 							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
 							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
 						</ul>
-						<p>Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
-							something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
-							during the winter.</p>
+						<p><?php echo $p['Descripcion'] ?> </p>
 					</div>
 				</div>
 			</div>
@@ -91,7 +89,7 @@
 									<div class="review_list">
 										<div class="review_item">
 											<div class="media">
-												<div class="d-flex"><img src="img/product/review-1.png" alt=""></div>
+												<div class="d-flex"><img src="img/product/anonimo.png" alt=""></div>
 												<div class="media-body"><h4><?php echo $comentario['Nombre'] ?></h4></div>
 											</div>
 											<p><?php echo $comentario['Comentario'] ?></p>
@@ -105,6 +103,7 @@
 								<h4>Add a Review</h4>
 								<form class="row contact_form" action="" method="post" id="contactForm" novalidate="novalidate">
 									<div class="col-md-12">
+										<h6>Puntuacion</h6>
 										<div class="form-check form-check-inline">
   											<input class="form-check-input" type="checkbox" name="inlineCheckbox1" value="1">
   											<label class="form-check-label" for="Puntuacion">1</label>
@@ -143,8 +142,7 @@
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-										<input name="IdProducto" value="<?php echo $_GET['producto']?>"><br>
-										<input name="IdProducto" value="<?php echo $comentario['IdProducto']?>"><br>
+										<input type="hidden" name="IdProducto" id="IdProducto" value="<?php echo $_GET['producto']?>"><br>
 										</div>
 									</div>
 									
