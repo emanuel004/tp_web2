@@ -1,7 +1,7 @@
 <?php
 include('inc/header.php');
 include('inc/sidebar.php');
-include('../Business/productosBusiness.php');
+include('Business/productosBusiness.php');
 ?>
   
   <!-- Content Wrapper. Contains page content -->
@@ -59,13 +59,13 @@ include('../Business/productosBusiness.php');
                     </tr>
                   </thead>
                   <tbody>
-                  <?php foreach(businessObtenerProductos() as $producto ){?>
+                  <?php foreach(businessObtenerProductos() as $prod ){?>
                     <tr>
-                      <td><?php echo $producto['ID']?></td>
-                      <td><?php echo $producto['Nombre']?></td>
-                      <td><?php echo $producto['Precio']?></td>
-                      <td><?php echo $producto['Idcategoria']?></td>
-                      <td><?php echo $producto['IdMarca']?></td>
+                      <td><?php echo $prod['ID']?></td>
+                      <td><?php echo $prod['Nombre']?></td>
+                      <td><?php echo $prod['Precio']?></td>
+                      <td><?php echo $prod['Idcategoria']?></td>
+                      <td><?php echo $prod['IdMarca']?></td>
                       
                       <td></td>
                     </tr>
