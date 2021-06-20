@@ -23,265 +23,80 @@ include("include/header.php");
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-3 col-lg-4 col-md-5">
-				<div class="sidebar-categories">
-					<div class="head">Browse Categories</div>
-					<ul class="main-categories">
-						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
-								 class="lnr lnr-arrow-right"></span>Fruits and Vegetables<span class="number">(53)</span></a>
-							<ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-
-						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span
-								 class="lnr lnr-arrow-right"></span>Meat and Fish<span class="number">(53)</span></a>
-							<ul class="collapse" id="meatFish" data-toggle="collapse" aria-expanded="false" aria-controls="meatFish">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#cooking" aria-expanded="false" aria-controls="cooking"><span
-								 class="lnr lnr-arrow-right"></span>Cooking<span class="number">(53)</span></a>
-							<ul class="collapse" id="cooking" data-toggle="collapse" aria-expanded="false" aria-controls="cooking">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#beverages" aria-expanded="false" aria-controls="beverages"><span
-								 class="lnr lnr-arrow-right"></span>Beverages<span class="number">(24)</span></a>
-							<ul class="collapse" id="beverages" data-toggle="collapse" aria-expanded="false" aria-controls="beverages">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#homeClean" aria-expanded="false" aria-controls="homeClean"><span
-								 class="lnr lnr-arrow-right"></span>Home and Cleaning<span class="number">(53)</span></a>
-							<ul class="collapse" id="homeClean" data-toggle="collapse" aria-expanded="false" aria-controls="homeClean">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-						<li class="main-nav-list"><a data-toggle="collapse" href="#homeClean" aria-expanded="false" aria-controls="homeClean"><span
-								 class="lnr lnr-arrow-right"></span>Home and Cleaning<span class="number">(53)</span></a>
-							<ul class="collapse" id="homeClean" data-toggle="collapse" aria-expanded="false" aria-controls="homeClean">
-								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
-								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
 				<div class="sidebar-filter mt-50">
 					<div class="top-filter-head">Product Filters</div>
+					<div class="common-filter">
+						<div class="head">Zapatillas</div>
+						<form action="#">
+							<ul>
+								<?php 
+								$cat = json_decode(file_get_contents('datos/categoria.json'),TRUE);
+								foreach($cat as $cate){?>
+									<li class="filter-list"><a href="category.php?categoria=<?php echo $cate['Id'] ?>&marca=<?php echo (isset($_GET['marca']))?$_GET['marca']:""; ?>"><?php echo $cate['nombre'] ?></a></li>
+								<?php } ?>
+								<li class="filter-list"><a href="category.php?categoria=&marca=<?php echo (isset($_GET['marca']))?$_GET['marca']:""; ?>">Todas</a></li>
+							</ul>
+						</form>
+					</div>
 					<div class="common-filter">
 						<div class="head">Marcas</div>
 						<form action="#">
 							<ul>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Apple<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Asus<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Gionee<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label for="micromax">Micromax<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Samsung<span>(19)</span></label></li>
+							<?php 
+							$marc = json_decode(file_get_contents('datos/marcas.json'),TRUE);
+							foreach($marc as $marca){?>
+								<li class="filter-list"><a href="category.php?marca=<?php echo $marca['Id']?>&categoria=<?php echo (isset($_GET['categoria']))?$_GET['categoria']:""; ?>">
+								<?php echo $marca['nombre'] ?>
+								</a></li>
+							<?php } ?>
+							<li class="filter-list"><a href="category.php?marca=&categoria=<?php echo (isset($_GET['categoria']))?$_GET['categoria']:""; ?>">Todas</a></li>
 							</ul>
 						</form>
-					</div>
-					<div class="common-filter">
-						<div class="head">Genero</div>
-						<form action="#">
-							<ul>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Apple<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Asus<span>(29)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Gionee<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label for="micromax">Micromax<span>(19)</span></label></li>
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Samsung<span>(19)</span></label></li>
-							</ul>
-						</form>
-					</div>
-					<div class="common-filter">
-						<div class="head">Price</div>
-						<div class="price-range-area">
-							<div id="price-range"></div>
-							<div class="value-wrapper d-flex">
-								<div class="price">Price:</div>
-								<span>$</span>
-								<div id="lower-value"></div>
-								<div class="to">to</div>
-								<span>$</span>
-								<div id="upper-value"></div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-xl-9 col-lg-8 col-md-7">
-				<!-- Start Filter Bar -->
-				<div class="filter-bar d-flex flex-wrap align-items-center">
-					<div class="sorting">
-						<select>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
-						</select>
-					</div>
-					<div class="sorting mr-auto">
-						<select>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-						</select>
-					</div>
-					<div class="pagination">
-						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
-						<a href="#" class="active">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-						<a href="#">6</a>
-						<a href="#" class="next-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-					</div>
-				</div>
-				<!-- End Filter Bar -->
 				<!-- Start Best Seller -->
 				<section class="lattest-product-area pb-40 category-list">
 					<div class="row">
 						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p1.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-										<a href="single-product.php" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">detalle</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p2.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-										<a href="single-product.php" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">detalle</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p3.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-										<a href="single-product.php" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">detalle</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p4.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-										<a href="single-product.php" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">detalle</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p5.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-										<a href="single-product.php" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">detalle</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single product -->
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid" src="img/product/p6.jpg" alt="">
-								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
-									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
-									</div>
-									<div class="prd-bottom">
-										<a href="single-product.php" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">detalle</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
+						<?php
+							$prod = json_decode(file_get_contents('datos/productos.json'),TRUE);
+							shuffle($prod);
+							foreach($prod as $producto){
+								$posicion = strpos($producto['imagen'],".",0);
+								$img = substr($producto['imagen'],0,$posicion);
+
+								$print = true;
+					
+								if(!empty($_GET['categoria']) AND $print){
+									if($producto['Idcategoria'] != $_GET['categoria']) $print = FALSE;
+								}
+							
+								if(!empty($_GET['marca']) AND $print){
+									if($producto['IdMarca'] != $_GET['marca']) $print = FALSE;
+								}
+							
+								if($print){
+						?>
+									<div class="col-lg-4 col-md-6">
+										<div class="single-product">
+											<img class="img-fluid" src="img/product-details/<?php echo $producto['imagen'] ?>" alt="">
+											<div class="product-details">
+												<h6><?php echo $producto['Nombre'] ?></h6>
+												<div class="price">
+													<h6><?php echo $producto['Precio'] ?></h6>
+												</div>
+												<div class="prd-bottom">
+													<a  href="single-product.php?id=<?php echo $producto['ID'] ?>&producto=<?php echo $img ?>" class="social-info">
+														<span class="lnr lnr-move"></span>
+														<p class="hover-text">detalles</p>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div> 
+						<?php } }?>
 					</div>
 				</section>
 				<!-- End Best Seller -->
@@ -308,5 +123,6 @@ include("include/header.php");
 			</div>
 		</div>
 	</div>
+
 
 <?php include("include/footer.php") ?>

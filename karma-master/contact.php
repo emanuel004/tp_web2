@@ -1,17 +1,13 @@
 <?php
 $section = "contact";
 include("./include/header.php");
+include_once('Business/contactenosBusiness.php');
+	
+	//de esta forma recibe el port
+	if(isset($_POST['submitCon'])){ 
+		businessGuardarMensaje($_POST);
+	}
 ?>
-
-<div class="modal_wrap">
-	<div class="mensaje_modal">
-		<h3>Errores encontrados</h3>
-		<span id="btnClose">Cerrar</span>
-		<p>Escriba un nombre</p>
-		<p>Ingrese un correo</p>
-		<p>Escriba un mensaje</p>
-	</div>
-</div>
 
 
 <!-- Start Banner Area -->
@@ -22,7 +18,7 @@ include("./include/header.php");
 				<h1>Contact Us</h1>
 				<nav class="d-flex align-items-center">
 					<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-					<a href="category.html">Contact</a>
+					<a href="contact.php">Contact</a>
 				</nav>
 			</div>
 		</div>
@@ -56,30 +52,30 @@ include("./include/header.php");
 				</div>
 			</div>
 			<div class="col-lg-9">
-				<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+				<form class="row contact_form"  method="post" id="contactForm" >
 					<div class="col-md-6">
 						<div class="form-group">
-							<input type="text" class="form-control" id="name" name="nombre" placeholder="Ingresae Nonbre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingresae Nonbre'" required>
+							<input type="text" class="form-control" name="Nombre" name="nombre" placeholder="Ingresae Nonbre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingresae Nonbre'" required>
 						</div>
 						<div class="form-group">
-							<input type="email" class="form-control" id="email" name="correo" placeholder="Ingrese Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese Email'" required>
+							<input type="email" class="form-control" name="Email" name="correo" placeholder="Ingrese Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese Email'" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" id="subject" name="telefono" placeholder="Telefono" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefono'" required>
+							<input type="text" class="form-control" name="Telefono" name="telefono" placeholder="Telefono" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefono'" required>
 						</div>
 
 						<div class="form-group">
-							<input type="text" class="form-control" id="subject" name="tipo_consulta" placeholder="Reclamo/Sugerencia" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Reclamo/Sugerencia'" required>
+							<input type="text" class="form-control" id="subject" name="Reclamo" placeholder="Reclamo/Sugerencia" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Reclamo/Sugerencia'" required>
 						</div>
 				
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<textarea class="form-control" name="mensaje" id="message" rows="1" placeholder="Ingrese Mensage" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese Mensage'" required></textarea>
+							<textarea class="form-control" name="Comentario" id="message" rows="1" placeholder="Ingrese Mensage" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese Mensage'" required></textarea>
 						</div>
 					</div>
 					<div class="col-md-12 text-right">
-						<button type="submit" value="Enviar mensaje" class="primary-btn">Send Message</button>
+						<button type="submit" name = "submitCon" value="Enviar mensaje" class="primary-btn">Send Message</button>
 					</div>
 				</form>
 			</div>
@@ -87,25 +83,6 @@ include("./include/header.php");
 	</div>
 </section>
 <!--================End Contact Area =================-->
-
-
-<!--================Area de Validacion =================-->
-
-<?php
-
-
-
-?>
-
-
-
-
-
-
-
-<?php
-include_once("./include/footer.php")
-?>
 
 
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
@@ -122,6 +99,7 @@ include_once("./include/footer.php")
 <script src="js/gmaps.min.js"></script>
 <script src="js/main.js"></script>
 
-</body>
+<?php
+include_once("./include/footer.php")
+?>
 
-</html>
