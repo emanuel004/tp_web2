@@ -53,7 +53,7 @@ function businessModificarProducto($datos = array(), $id){
 //die();   
 }
 
-function businessBorrarProducto($id){
-    daoBorrarProducto($id);
+function businessBorrarProducto($ID){
+    daoBorrarProducto($ID);
      
 }

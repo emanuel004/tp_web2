@@ -144,6 +144,7 @@ $producto = array(
             "imagen" => "mrn2.jpg",
             "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
+    
 );
 echo json_encode($producto);
 ?>

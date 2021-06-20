@@ -1,3 +1,8 @@
+<?php
+include_once('../helpers/urls.php');
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

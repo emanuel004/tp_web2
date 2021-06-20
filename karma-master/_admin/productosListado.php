@@ -2,6 +2,11 @@
 include('inc/header.php');
 include('inc/sidebar.php');
 include('Business/productosBusiness.php');
+
+if(isset($_GET['del'])){
+  businessBorrarProducto($_GET['del']);
+  redirect('productosListado.php');
+}
 ?>
   
   <!-- Content Wrapper. Contains page content -->
@@ -29,7 +34,7 @@ include('Business/productosBusiness.php');
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Productos<a href="productosForm.php"> add</a></h3>
+          <h3 class="card-title">Productos <a href="productosForm.php"><i class="fas fa-plus"></i></a></h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -67,7 +72,10 @@ include('Business/productosBusiness.php');
                       <td><?php echo $prod['Idcategoria']?></td>
                       <td><?php echo $prod['IdMarca']?></td>
                       
-                      <td></td>
+                      <td>
+                      <a href="productosForm.php?edit=<?php echo $prod['ID'] ?>"><p>Editar</p></a>
+                      <a href="productosListado.php?del=<?php echo $prod['ID'] ?>"><i class="fas fa-trash"></i></a>
+                      </td>
                     </tr>
                     <?php } ?>
                     
