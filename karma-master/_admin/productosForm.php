@@ -1,6 +1,30 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include('inc/header.php');
 include('inc/sidebar.php');
+include('Business/productosBusiness.php');
+include('Business/categoriasBusiness.php');
+include('Business/marcasBusiness.php');
+
+if(isset($_POST['submit'])){
+  if(!empty($_GET['edit'])){
+    businessModificarProducto($_POST,$_GET['edit']);
+}else{
+  businessGuardarProducto($_POST);
+  
+}
+  redirect('productosListado.php');
+}
+
+$producto= array(
+  "Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
+if(!empty($_GET['edit'])){
+  $producto=businessObtenerProductos($_GET['edit']);
+}
+
 ?>
   
   <!-- Content Wrapper. Contains page content -->
@@ -31,40 +55,57 @@ include('inc/sidebar.php');
             <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Quick Example</h3>
-              </div>
+              </div>                
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">Nombre</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo $producto['Nombre'] ?>">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Categoria</label>
+                    <select name="categoria">
+                    <?php foreach(businessObtenerCategorias() as $cat) {?>
+                    <option value="<?php echo $cat['Id'] ?>" <?php echo ($cat['Id'] == $producto['Idcategoria'])?'selected':'' ?>> <?php echo $cat['nombre'] ?> </option>
+                    <?php } ?>
+                    </select>
                   </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Marca</label>
+                    <select name="marca">
+                    <?php foreach(businessObtenerMarcas() as $marca) {?>
+                    <option value="<?php echo $marca['Id'] ?>" <?php echo ($marca['Id'] == $producto['IdMarca'])?'selected':'' ?>> <?php echo $marca['nombre'] ?> </option>
+                    <?php } ?>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Precio</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="precio" value="<?php echo $producto['Precio'] ?>">
+                  </div>
+               
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Descripcion</label>
+                    <textarea  class="form-control"  name="descripcion" ><?php echo $producto['Descripcion'] ?></textarea>
+                  </div>
+             
                   <div class="form-group">
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <input type="file" name="imagen"  class="custom-file-input" id="exampleInputFile">
+                        <input type="hidden" name="old_imagen" value="<?php echo $producto['imagen'] ?>" class="custom-file-input" id="exampleInputFile">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
                       </div>
                     </div>
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
+                 
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
             </div>
@@ -74,7 +115,7 @@ include('inc/sidebar.php');
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-          Footer
+          
         </div>
         <!-- /.card-footer-->
       </div>

@@ -1,7 +1,16 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include('inc/header.php');
 include('inc/sidebar.php');
 include('Business/productosBusiness.php');
+include('Business/categoriasBusiness.php');
+include('Business/marcasBusiness.php');
+
+$marcas = businessObtenerMarcas();
+$categorias = businessObtenerCategorias();
 
 if(isset($_GET['del'])){
   businessBorrarProducto($_GET['del']);
@@ -68,9 +77,10 @@ if(isset($_GET['del'])){
                     <tr>
                       <td><?php echo $prod['ID']?></td>
                       <td><?php echo $prod['Nombre']?></td>
+                      <td><?php echo $categorias[$prod['Idcategoria']]['nombre']?></td>
+                      <td><?php echo $marcas[$prod['IdMarca']]['nombre']?></td>
                       <td><?php echo $prod['Precio']?></td>
-                      <td><?php echo $prod['Idcategoria']?></td>
-                      <td><?php echo $prod['IdMarca']?></td>
+                     
                       
                       <td>
                       <a href="productosForm.php?edit=<?php echo $prod['ID'] ?>"><p>Editar</p></a>

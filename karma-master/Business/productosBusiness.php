@@ -1,5 +1,5 @@
 <?php
-include_once('../DAO/productosDao.php');
+include_once('DAO/productosDao.php');
 
 
 function businessGuardarProducto($datos = array()){
