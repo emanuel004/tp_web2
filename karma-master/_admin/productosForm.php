@@ -1,7 +1,7 @@
 <?php
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 include('inc/header.php');
 include('inc/sidebar.php');
@@ -62,11 +62,11 @@ if(!empty($_GET['edit'])){
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nombre</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Nombre" value="<?php echo $producto['Nombre'] ?>">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" value="<?php echo $producto['Nombre'] ?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Categoria</label>
-                    <select name="Idcategoria">
+                    <select name="categoria">
                     <?php foreach(businessObtenerCategorias() as $cat) {?>
                     <option value="<?php echo $cat['Id'] ?>" <?php echo ($cat['Id'] == $producto['Idcategoria'])?'selected':'' ?>> <?php echo $cat['nombre'] ?> </option>
                     <?php } ?>
@@ -74,7 +74,7 @@ if(!empty($_GET['edit'])){
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Marca</label>
-                    <select name="IdMarca">
+                    <select name="marca">
                     <?php foreach(businessObtenerMarcas() as $marca) {?>
                     <option value="<?php echo $marca['Id'] ?>" <?php echo ($marca['Id'] == $producto['IdMarca'])?'selected':'' ?>> <?php echo $marca['nombre'] ?> </option>
                     <?php } ?>
@@ -82,12 +82,12 @@ if(!empty($_GET['edit'])){
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Precio</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="Precio" value="<?php echo $producto['Precio'] ?>">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="precio" value="<?php echo $producto['Precio'] ?>">
                   </div>
                
                   <div class="form-group">
                     <label for="exampleInputEmail1">Descripcion</label>
-                    <textarea  class="form-control"  name="Descripcion" ><?php echo $producto['Descripcion'] ?></textarea>
+                    <textarea  class="form-control"  name="descripcion" ><?php echo $producto['Descripcion'] ?></textarea>
                   </div>
              
                   <div class="form-group">

@@ -48,9 +48,7 @@ function businessModificarProducto($datos = array(), $id){
         if(file_exists('../images/'.$id.'/'.$datos['old_imagen'])){
             unlink('../images/'.$id.'/'.$datos['old_imagen']);
         }
-    }
-
-//die();   
+    }  
 }
 
 function businessBorrarProducto($id){
