@@ -10,12 +10,12 @@ function businessGuardarProducto($datos = array()){
     $id = daoGuardarProducto($datos);
     
     if(!empty($_FILES['imagen'])){
-        if(!is_dir('../images/'.$id)){
-            mkdir('../images/'.$id);
+        if(!is_dir('../img/product-details/')){
+            mkdir('../img/product-details/');
         }
-        move_uploaded_file($_FILES['imagen']['tmp_name'],'../images/'.$id.'/'.$_FILES['imagen']['name']);
-        if(file_exists('../images/'.$id.'/'.$datos['old_imagen'])){
-            unlink('../images/'.$id.'/'.$datos['old_imagen']);
+        move_uploaded_file($_FILES['imagen']['tmp_name'],'../img/product-details/'.$_FILES['imagen']['name']);
+        if(file_exists('../img/product-details/'.$id.'/'.$datos['old_imagen'])){
+            unlink('../img/product-details/'.$id.'/'.$datos['old_imagen']);
         } 
     } 
 
@@ -41,12 +41,12 @@ function businessModificarProducto($datos = array(), $id){
     daoModificarProducto($datos,$id);
 
     if(!empty($_FILES['imagen'])){
-        if(!is_dir('../images/'.$id)){
-            mkdir('../images/'.$id);
+        if(!is_dir('../img/product-details/')){
+            mkdir('../img/product-details/');
         }
-        move_uploaded_file($_FILES['imagen']['tmp_name'],'../images/'.$id.'/'.$_FILES['imagen']['name']);
-        if(file_exists('../images/'.$id.'/'.$datos['old_imagen'])){
-            unlink('../images/'.$id.'/'.$datos['old_imagen']);
+        move_uploaded_file($_FILES['imagen']['tmp_name'],'../img/product-details/'.$id.'/'.$_FILES['imagen']['name']);
+        if(file_exists('../img/product-details/'.$datos['old_imagen'])){
+            unlink('../img/product-details/'.$datos['old_imagen']);
         }
     }
 

@@ -1,7 +1,7 @@
 <?php
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 include('inc/header.php');
 include('inc/sidebar.php');
@@ -19,10 +19,9 @@ if(isset($_POST['submit'])){
   redirect('productosListado.php');
 }
 
-$producto= array(
-  "Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
+$producto= array("Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
 if(!empty($_GET['edit'])){
-  $producto=businessObtenerProductos($_GET['edit']);
+  $producto=businessObtenerProducto($_GET['edit']);
 }
 
 ?>
@@ -75,9 +74,9 @@ if(!empty($_GET['edit'])){
                   <div class="form-group">
                     <label for="exampleInputPassword1">Marca</label>
                     <select name="IdMarca">
-                    <?php foreach(businessObtenerMarcas() as $marca) {?>
-                    <option value="<?php echo $marca['Id'] ?>" <?php echo ($marca['Id'] == $producto['IdMarca'])?'selected':'' ?>> <?php echo $marca['nombre'] ?> </option>
-                    <?php } ?>
+                    <?php foreach(businessObtenerMarcas() as $cat){?>
+                        <option value="<?php echo $cat['Id']?>" <?php echo ($cat['Id'] == $producto['IdMarca'])?'selected':'' ?>> <?php echo $cat['nombre']?></option>
+                      <?php } ?>
                     </select>
                   </div>
                   <div class="form-group">
@@ -94,7 +93,7 @@ if(!empty($_GET['edit'])){
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" name="imagen"  class="custom-file-input" id="exampleInputFile">
+                      <input type="file" name="imagen"  class="custom-file-input" id="exampleInputFile">
                         <input type="hidden" name="old_imagen" value="<?php echo $producto['imagen'] ?>" class="custom-file-input" id="exampleInputFile">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
