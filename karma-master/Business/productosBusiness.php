@@ -16,14 +16,14 @@ function businessGuardarProducto($datos = array()){
         move_uploaded_file($_FILES['imagen']['tmp_name'],'../images/'.$id.'/'.$_FILES['imagen']['name']);
         if(file_exists('../images/'.$id.'/'.$datos['old_imagen'])){
             unlink('../images/'.$id.'/'.$datos['old_imagen']);
-        } 
+
+        }
     } 
 
 
 }
 
 function businessObtenerProductos(){
-    
  
     return daoObtenerProductos();
 
@@ -41,12 +41,14 @@ function businessModificarProducto($datos = array(), $id){
     daoModificarProducto($datos,$id);
 
     if(!empty($_FILES['imagen'])){
+
         if(!is_dir('../images/'.$id)){
             mkdir('../images/'.$id);
         }
         move_uploaded_file($_FILES['imagen']['tmp_name'],'../images/'.$id.'/'.$_FILES['imagen']['name']);
         if(file_exists('../images/'.$id.'/'.$datos['old_imagen'])){
             unlink('../images/'.$id.'/'.$datos['old_imagen']);
+
         }
     }
 
@@ -55,5 +57,6 @@ function businessModificarProducto($datos = array(), $id){
 
 function businessBorrarProducto($ID){
     daoBorrarProducto($ID);
+
      
 }
