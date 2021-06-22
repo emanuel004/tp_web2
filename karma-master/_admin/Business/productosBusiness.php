@@ -22,10 +22,10 @@ function businessGuardarProducto($datos = array()){
 
 }
 
-function businessObtenerProductos(){
+function businessObtenerProductos($id){
     
  
-    return daoObtenerProductos();
+    return daoObtenerProductos($id);
 
 }
 
