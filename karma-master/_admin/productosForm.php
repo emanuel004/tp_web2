@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 $producto= array(
  "ID" =>"", "Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
 if(!empty($_GET['edit'])){
-  $producto=businessObtenerProductos($_GET['edit']);
+  $producto=businessObtenerProducto($_GET['edit']);
 }
 
 ?>
