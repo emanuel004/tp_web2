@@ -44,9 +44,9 @@ function businessModificarProducto($datos = array(), $id){
         if(!is_dir('../img/product-details/')){
             mkdir('../img/product-details/');
         }
-        move_uploaded_file($_FILES['imagen']['tmp_name'],'../img/product-details/'.$id.'/'.$_FILES['imagen']['name']);
-        if(file_exists('../img/product-details/'.$datos['old_imagen'])){
-            unlink('../img/product-details/'.$datos['old_imagen']);
+        move_uploaded_file($_FILES['imagen']['tmp_name'],'../img/product-details/'.$_FILES['imagen']['name']);
+        if(file_exists('../img/product-details/'.$id.'/'.$datos['old_imagen'])){
+            unlink('../img/product-details/'.$id.'/'.$datos['old_imagen']);
         }
     }
 
