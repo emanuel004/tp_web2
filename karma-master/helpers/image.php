@@ -14,11 +14,15 @@ $tamanhos = array(0 => array('nombre'=>'big','ancho'=>'100','alto'=>'200'),
 			              1 => array('nombre'=>'small','ancho'=>'50','alto'=>'100'));
                   
                   */
-				  
+		  
 function redimensionar($ruta,$file_name,$file_temp,$posicion,$tamanhos){
+	
 	$filename = stripslashes($file_name);
- 	$extension = getExtension($filename);
+ 	$extension = pathinfo($filename, PATHINFO_EXTENSION);
  	$extension = strtolower($extension);
+
+	 
+
 	if (($extension != "jpg") && ($extension != "jpeg") && ($extension != "png") && ($extension != "gif")) {
  		$errors=1;
  	}else{
@@ -42,7 +46,7 @@ function redimensionar($ruta,$file_name,$file_temp,$posicion,$tamanhos){
 		list($width,$height)=getimagesize($uploadedfile);
 		foreach($tamanhos as $tam){
 			$newwidth = $tam['ancho'];
-			$newheight=($height/$width)*$newwidth;
+			$newheight= $tam['alto'];
 			
 			if($newheight > $tam['alto']){
 				$newheight = $tam['alto'];
@@ -58,10 +62,19 @@ function redimensionar($ruta,$file_name,$file_temp,$posicion,$tamanhos){
 				$gris = imagecolorallocate($tmp, 234, 234, 234);
 				imagefill($tmp, 0, 0, $gris);
 			}
+			echo $height;
+			echo ' ';
+			echo $width;
+			echo ' ';
+			echo $newheight;
+			echo ' ';
+			echo $newwidth;
+			echo ' ';
 			imagecopyresampled($tmp,$src,0,0,0,0,$newwidth,$newheight,$width,$height);
 			
-			$filename = $ruta.'img_'.$posicion.'_'.$tam['nombre'].'.'.$extension;
+			$filename = $ruta.$file_name;
 			//$filename = $ruta.$tam['nombre'].$file_name;
+			echo $filename;
 			if($extension == "png"){
 				imagecolortransparent($tmp,$gris);
 				imagepng($tmp,$filename,9);
