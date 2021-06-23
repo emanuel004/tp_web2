@@ -52,7 +52,7 @@ function saveImage($datos,$id){
 function businessBorrarProducto($ID){
     daoBorrarProducto($ID);
 
-     
 }
 
 ?>
+

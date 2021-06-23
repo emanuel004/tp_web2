@@ -56,7 +56,7 @@ function daoBorrarProducto($id){
         */
         file_put_contents('../datos/productos.json',json_encode($productos));
      }
-     
+
 }
 
 ?>
