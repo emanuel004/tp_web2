@@ -112,7 +112,7 @@ $producto = array(
             "ID" => 13,	    
             "Nombre" => "Zapatillas",
             "Precio" =>"$500",
-            "Idcategoria" =>"",	    
+            "Idcategoria" =>"2",	    
             "IdMarca" => 1,
             "imagen" => "mra1.jpg",
             "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."    
@@ -121,7 +121,7 @@ $producto = array(
             "ID" => 14,	    
             "Nombre" =>"Zapatillas" ,
             "Precio" =>"$3000",
-            "Idcategoria" =>"",	    
+            "Idcategoria" =>"2",	    
             "IdMarca" => 3,
             "imagen" => "mrp1.jpg",
             "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
@@ -130,7 +130,7 @@ $producto = array(
             "ID" => 15,	    
             "Nombre" => "Zapatillas",
             "Precio" =>"$5300",
-            "Idcategoria" =>"",	    
+            "Idcategoria" =>"2",	    
             "IdMarca" => 2,
             "imagen" => "mrn1.jpg",
             "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
@@ -139,11 +139,12 @@ $producto = array(
             "ID" => 16,	    
             "Nombre" => "Zapatillas",
             "Precio" =>"$10547",
-            "Idcategoria" =>"",	    
+            "Idcategoria" =>"2",	    
             "IdMarca" => 2,
             "imagen" => "mrn2.jpg",
             "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
+    
 );
 echo json_encode($producto);
 ?>

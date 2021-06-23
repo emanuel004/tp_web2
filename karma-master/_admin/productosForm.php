@@ -11,16 +11,20 @@ include('Business/marcasBusiness.php');
 
 if(isset($_POST['submit'])){
   if(!empty($_GET['edit'])){
+    echo '---------------------------------------------------------------------------------modificar';
     businessModificarProducto($_POST,$_GET['edit']);
 }else{
-  businessGuardarProducto($_POST);
+  echo '---------------------------------------nuevo';
+  //die();
+  //businessGuardarProducto($_POST);
   
 }
   //redirect('productosListado.php');
 }
 
-$producto= array(
- "ID" =>"", "Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
+echo ('-----------------------------------------------------------------------------no');
+
+$producto= array("Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
 if(!empty($_GET['edit'])){
   $producto=businessObtenerProducto($_GET['edit']);
 }
@@ -94,8 +98,8 @@ if(!empty($_GET['edit'])){
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                      <input type="file" name="imagen"  class="custom-file-input" id="exampleInputFile">
-                        <!--<input type="hidden" name="old_imagen" value="" class="custom-file-input" id="exampleInputFile">-->
+                      <input type="file" name="imagen[]"  class="custom-file-input" id="exampleInputFile">
+                        <!--<input type="hidden" name="old_imagen" value="<php echo $producto['imagen'] ?>" class="custom-file-input" id="exampleInputFile">-->
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
                     </div>

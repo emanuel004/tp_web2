@@ -55,5 +55,3 @@ function daoBorrarComentario($id){
     fwrite($fp, json_encode($mensajes));
     fclose($fp);
 }
-
-?>
