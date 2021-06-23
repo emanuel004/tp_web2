@@ -36,7 +36,7 @@ function businessModificarProducto($datos = array(), $id){
 
 function saveImage($datos,$id){
     
-        $ruta= '../helpers/images/'.$id.'/';
+        $ruta= '../images/'.$id.'/';
         if(!is_dir($ruta)){
             mkdir($ruta);
         }
