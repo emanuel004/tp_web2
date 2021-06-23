@@ -1,6 +1,6 @@
 <?php
 include_once('DAO/productosDao.php');
-include_once('../../helpers/image.php');
+include_once('helpers/image.php');
 
 function businessGuardarProducto($datos = array()){
 
