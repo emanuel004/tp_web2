@@ -36,12 +36,12 @@ function businessModificarProducto($datos = array(), $id){
 
 function saveImage($datos,$id){
     
-        $ruta= '../images/'.$id.'/';
+        $ruta= '../img/product-details'.$id.'/';
         if(!is_dir($ruta)){
             mkdir($ruta,0777,true);
         }
         $tamanhos = array(0 => array('nombre'=>'big','ancho'=>'100','alto'=>'200'),
-        1 => array('nombre'=>'small','ancho'=>'50','alto'=>'100'));
+        1 => array('nombre'=>'small','ancho'=>'1200','alto'=>'1200'));
         redimensionar($ruta,$datos['name'],$datos['tmp_name'],0,$tamanhos);
         //move_uploaded_file($_FILES['imagen']['tmp_name'],'../images/'.$id.'/'.$_FILES['imagen']['name']);
        /* if(file_exists('../images/'.$id.'/'.$datos['old_imagen'])){

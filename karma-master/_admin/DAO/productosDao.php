@@ -10,6 +10,7 @@ function daoGuardarProducto($datos = array()){
         'Idcategoria' => $datos['Idcategoria'],
         'IdMarca' => $datos['IdMarca'],
         'Descripcion' => $datos['Descripcion'],
+        'imagen' => $datos['imagen']
     ); 
     file_put_contents('../datos/productos.json',json_encode($productos));
     return $ID;
@@ -40,7 +41,8 @@ function daoModificarProducto($datos = array(), $ID){
         'Precio' => $datos['Precio'],
         'Idcategoria' => $datos['Idcategoria'],
         'IdMarca' => $datos['IdMarca'],
-        'Descripcion' => $datos['Descripcion']
+        'Descripcion' => $datos['Descripcion'],
+        'imagen' => $datos['imagen']
    ); 
    file_put_contents('../datos/productos.json',json_encode($productos));
    
