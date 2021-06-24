@@ -7,3 +7,5 @@ function businessObtenerCategorias(){
     return daoObtenerCategorias();
 
 }
+
+?>
