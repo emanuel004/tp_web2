@@ -6,7 +6,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"1",    
             "IdMarca" => 1,
-            "imagen" => "hra1.jpg"	    
+            "imagen" => "hra1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "2" => array(
             "ID" => 2,	    
@@ -14,7 +15,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"1",	    
             "IdMarca" => 1,
-            "imagen" => "hra2.jpg"	    
+            "imagen" => "hra2.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "3" => array(
             "ID" => 3,	    
@@ -22,7 +24,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"1",	    
             "IdMarca" => 2,
-            "imagen" => "hrn1.jpg"	    
+            "imagen" => "hrn1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "4" => array(
             "ID" => 4,	    
@@ -30,7 +33,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"1",	    
             "IdMarca" => 2,
-            "imagen" => "hrn1.jpg"	    
+            "imagen" => "hrn1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
      "5" => array(
             "ID" => 5,	    
@@ -38,7 +42,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"1",	    
             "IdMarca" => 3,
-            "imagen" => "hrp1.jpg"	    
+            "imagen" => "hrp1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "6" => array(
             "ID" => 6,	    
@@ -46,7 +51,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"1",	    
             "IdMarca" => 3,
-            "imagen" => "hrp2.jpg"	    
+            "imagen" => "hrp2.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
      "7" => array(
             "ID" => 7,	    
@@ -54,7 +60,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"2",	    
             "IdMarca" => 1,
-            "imagen" => "hta1.jpg"	    
+            "imagen" => "hta1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
      "8" => array(
             "ID" => 8,	    
@@ -62,7 +69,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"2",	    
             "IdMarca" => 1,
-            "imagen" => "hta2.jpg"	    
+            "imagen" => "hta2.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "9" => array(
             "ID" => 9,	    
@@ -70,7 +78,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"2",	    
             "IdMarca" => 2,
-            "imagen" => "htn1.jpg"	    
+            "imagen" => "htn1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "10" => array(
             "ID" => 10,	    
@@ -78,7 +87,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"2",	    
             "IdMarca" => 2,
-            "imagen" => "htn2.jpg"	    
+            "imagen" => "htn2.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "11" => array(
             "ID" => 11,	    
@@ -86,7 +96,8 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"2",	    
             "IdMarca" => 3,
-            "imagen" => "htp1.jpg"	    
+            "imagen" => "htp1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
      "12" => array(
             "ID" => 12,	    
@@ -94,40 +105,46 @@ $producto = array(
             "Precio" =>"$149.99",
             "Idcategoria" =>"2",	    
             "IdMarca" => 3,
-            "imagen" => "htp2.jpg"	    
+            "imagen" => "htp2.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "13" => array(
             "ID" => 13,	    
             "Nombre" => "Zapatillas",
             "Precio" =>"$500",
-            "Idcategoria" =>"",	    
+            "Idcategoria" =>"2",	    
             "IdMarca" => 1,
-            "imagen" => "mra1.jpg"	    
+            "imagen" => "mra1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."    
             ),
     "14" => array(
             "ID" => 14,	    
             "Nombre" =>"Zapatillas" ,
             "Precio" =>"$3000",
-            "Idcategoria" =>"",	    
+            "Idcategoria" =>"2",	    
             "IdMarca" => 3,
-            "imagen" => "mrp1.jpg"	    
+            "imagen" => "mrp1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "15" => array(
             "ID" => 15,	    
             "Nombre" => "Zapatillas",
             "Precio" =>"$5300",
-            "Idcategoria" =>"",	    
+            "Idcategoria" =>"2",	    
             "IdMarca" => 2,
-            "imagen" => "mrn1.jpg"	    
+            "imagen" => "mrn1.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
     "16" => array(
             "ID" => 16,	    
             "Nombre" => "Zapatillas",
             "Precio" =>"$10547",
-            "Idcategoria" =>"",	    
+            "Idcategoria" =>"2",	    
             "IdMarca" => 2,
-            "imagen" => "mrn2.jpg"	    
+            "imagen" => "mrn2.jpg",
+            "Descripcion" => "Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter."	    
             ),
+    
 );
 echo json_encode($producto);
 ?>
