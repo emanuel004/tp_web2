@@ -3,21 +3,14 @@ include_once('DAO/productosDao.php');
 include_once('../helpers/image.php');
 
 
-function businessGuardarProducto($datos = array()){
+function businessGuardarProducto($datos = array(),$archivo = array()){
 
     /*if(!empty($_FILES['imagen'])){
         $datos['imagen'] = $_FILES['imagen']['name'];
     }*/
-    $id = daoGuardarProducto($datos);
+    $id = daoGuardarProducto($datos,$_FILES);
     
     if(!empty($_FILES['imagen'])){
-        /*if(!is_dir('../img/product-details/')){
-            mkdir('../img/product-details/');
-        }
-        move_uploaded_file($_FILES['imagen']['tmp_name'],'../img/product-details/'.$_FILES['imagen']['name']);
-        if(file_exists('../img/product-details/'.$id.'/'.$datos['old_imagen'])){
-            unlink('../img/product-details/'.$id.'/'.$datos['old_imagen']);
-        } */
         saveImage($_FILES['imagen'], $id);
     } 
 
@@ -25,34 +18,22 @@ function businessGuardarProducto($datos = array()){
 }
 
 function businessObtenerProductos(){
-    
- 
     return daoObtenerProductos();
-
 }
 
 function businessObtenerProducto($id){
     return daoObtenerProducto($id);
-
 }
 
-function businessModificarProducto($datos = array(), $id){
+function businessModificarProducto($datos = array(), $id,$archivo = array()){
 
     if(!empty($_FILES['imagen'])){
         $datos['imagen'] = $_FILES['imagen']['name'];
     }
-    daoModificarProducto($datos,$id);
+    daoModificarProducto($datos,$id,$_FILES);
     
 
     if(!empty($_FILES['imagen'])){
-        /*if(!is_dir('../img/product-details/')){
-            mkdir('../img/product-details/');
-        }
-        move_uploaded_file($_FILES['imagen']['tmp_name'],'../img/product-details/'.$_FILES['imagen']['name']);
-        if(file_exists('../img/product-details/'.$id.'/'.$datos['old_imagen'])){
-            unlink('../img/product-details/'.$id.'/'.$datos['old_imagen']);
-        }*/
-        
         saveImage($_FILES['imagen'], $id);
     }
 
@@ -60,6 +41,7 @@ function businessModificarProducto($datos = array(), $id){
 }
 
 function saveImage($datos,$id){
+	var_dump($datos);
     
     $ruta= '../img/product-details/';
     if(!is_dir($ruta)){
@@ -67,10 +49,12 @@ function saveImage($datos,$id){
     }
     $tamanhos = array(0 => array('nombre'=>'small','ancho'=>'1200','alto'=>'1200'));
     
-    redimensionar($ruta,$datos['name'][0],$datos['tmp_name'][0],0,$tamanhos);
+    redimensionar($ruta,$datos['name'],$datos['tmp_name'],0,$tamanhos);
 }
 
 function businessBorrarProducto($id){
     daoBorrarProducto($id);
      
 }
+
+?>
