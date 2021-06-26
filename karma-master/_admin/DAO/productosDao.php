@@ -1,6 +1,6 @@
 <?php
 
-function daoGuardarProducto($datos = array(),$archivo){
+function daoGuardarProducto($datos = array()){
      $productos = daoObtenerProductos();
      $ID = date('Ymdhisu');
      $productos[$ID] = array(
@@ -9,7 +9,6 @@ function daoGuardarProducto($datos = array(),$archivo){
         'Precio' => $datos['Precio'],
         'Idcategoria' => $datos['Idcategoria'],
         'IdMarca' => $datos['IdMarca'],
-        'imagen' => $archivo['imagen']['name'],
         'Descripcion' => $datos['Descripcion'],
     ); 
     file_put_contents('../datos/productos.json',json_encode($productos));
@@ -33,7 +32,7 @@ function daoObtenerProducto($id){
 
 }
 
-function daoModificarProducto($datos = array(), $ID,$archivo = array()){
+function daoModificarProducto($datos = array(), $ID){
     $productos = daoObtenerProductos();
     $productos[$ID] = array(
         'ID' => $ID,
@@ -41,7 +40,6 @@ function daoModificarProducto($datos = array(), $ID,$archivo = array()){
         'Precio' => $datos['Precio'],
         'Idcategoria' => $datos['Idcategoria'],
         'IdMarca' => $datos['IdMarca'],
-        'imagen' => $archivo['imagen']['name'],
         'Descripcion' => $datos['Descripcion']
    ); 
    file_put_contents('../datos/productos.json',json_encode($productos));
@@ -60,5 +58,3 @@ function daoBorrarProducto($id){
      }
      
 }
-
-?>

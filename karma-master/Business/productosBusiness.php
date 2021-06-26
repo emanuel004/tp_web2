@@ -57,5 +57,3 @@ function businessBorrarProducto($ID){
     daoBorrarProducto($ID);
      
 }
-
-?>
