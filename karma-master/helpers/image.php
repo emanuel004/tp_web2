@@ -14,21 +14,20 @@ $tamanhos = array(0 => array('nombre'=>'big','ancho'=>'100','alto'=>'200'),
 			              1 => array('nombre'=>'small','ancho'=>'50','alto'=>'100'));
                   
                   */
-		  
+				  
 function redimensionar($ruta,$file_name,$file_temp,$posicion,$tamanhos){
-	
 	$filename = stripslashes($file_name);
- 	$extension = pathinfo($filename, PATHINFO_EXTENSION);
+ 	$extension = getExtension($filename);
  	$extension = strtolower($extension);
-
-	 
-
 	if (($extension != "jpg") && ($extension != "jpeg") && ($extension != "png") && ($extension != "gif")) {
  		$errors=1;
  	}else{
 		$size=filesize($file_temp);
         $uploadedfile = $file_temp;
-		
+		/*if ($size > 2*1024){
+			$change='<div class="msgdiv">You have exceeded the size limit!</div> ';
+			$errors=1;
+		}*/
 		if($extension=="jpg" || $extension=="jpeg" ){ 
 			$src = imagecreatefromjpeg($uploadedfile);
 		}else if($extension=="png"){ 
@@ -43,17 +42,26 @@ function redimensionar($ruta,$file_name,$file_temp,$posicion,$tamanhos){
 		list($width,$height)=getimagesize($uploadedfile);
 		foreach($tamanhos as $tam){
 			$newwidth = $tam['ancho'];
-			$newheight= $tam['alto'];
+			$newheight=($height/$width)*$newwidth;
 			
+			if($newheight > $tam['alto']){
+				$newheight = $tam['alto'];
+				$newwidth=($width/$height)*$newheight;
+				if($newwidth > $tam['ancho']){
+					$nheight = $newheight;
+					$nwidth = $newwidth;
+					$newheight=($nheight/$nwidth)*$tam['ancho'];
+				}
+			}
 			$tmp=imagecreatetruecolor($newwidth,$newheight);
 			if($extension == "png"){
 				$gris = imagecolorallocate($tmp, 234, 234, 234);
 				imagefill($tmp, 0, 0, $gris);
 			}
-			
 			imagecopyresampled($tmp,$src,0,0,0,0,$newwidth,$newheight,$width,$height);
 			
-			$filename = $ruta.$file_name;
+			$filename = $ruta.'img_'.$posicion.'_'.$tam['nombre'].'.'.$extension;
+			//$filename = $ruta.$tam['nombre'].$file_name;
 			if($extension == "png"){
 				imagecolortransparent($tmp,$gris);
 				imagepng($tmp,$filename,9);

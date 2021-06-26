@@ -11,6 +11,4 @@ function daoObtenerCategorias(){
     return $cats;
 
 }
-
-?>
  
