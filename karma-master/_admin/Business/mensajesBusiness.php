@@ -1,6 +1,6 @@
 <?php
 
-include_once('DAO/contactenosDao.php');
+include_once('DAO/mensajesDao.php');
 
 
 function businessGuardarMensaje($datos = array()){
@@ -12,7 +12,7 @@ function businessObtenerMensajes(){
 }
 
 function businessObtenerMensaje($id){
-    return daoObtenerMensajes();   
+    return daoObtenerMensaje($id);   
 
 }
 

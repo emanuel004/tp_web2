@@ -60,3 +60,5 @@ function daoBorrarProducto($ID){
      }
      
 }
+
+?>
