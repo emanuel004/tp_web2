@@ -7,3 +7,5 @@ function businessObtenerMarcas(){
     return daoObtenerMarcas();
 
 }
+
+?>

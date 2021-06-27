@@ -5,16 +5,12 @@
 
 include('inc/header.php');
 include('inc/sidebar.php');
-include('Business/productosBusiness.php');
-include('Business/categoriasBusiness.php');
-include('Business/marcasBusiness.php');
+include('Business/mensajesBusiness.php');
 
-$marcas = businessObtenerMarcas();
-$categorias = businessObtenerCategorias();
 
 if(isset($_GET['del'])){
-  businessBorrarProducto($_GET['del']);
-  redirect('productosListado.php');
+  businessBorrarMensaje($_GET['del']);
+  redirect('mensajesListado.php');
 }
 ?>
   
@@ -25,12 +21,12 @@ if(isset($_GET['del'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Listado de Productos</h1>
+            <h1>Listado de Mensajes</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active">Listado de Productos</li>
+              <li class="breadcrumb-item active">Listado de Mensajes</li>
             </ol>
           </div>
         </div>
@@ -43,8 +39,6 @@ if(isset($_GET['del'])){
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Productos <a href="productosForm.php"><i class="fas fa-plus"></i></a></h3>
-
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
@@ -66,25 +60,22 @@ if(isset($_GET['del'])){
                     <tr>
                       <th>ID</th>
                       <th>Nombre</th>
-                      <th>Categoria</th>
-                      <th>Marca</th>
-                      <th>Precio</th>
-                      <th>Acciones</th>
+                      <th>E-Mail</th>
+                      <th>Telefono</th>
+                      <th>Reclamo</th>
                     </tr>
                   </thead>
                   <tbody>
-                  <?php foreach(businessObtenerProductos() as $prod ){?>
+                  <?php foreach(businessObtenerMensajes() as $mensaje ){?>
                     <tr>
-                      <td><?php echo $prod['ID']?></td>
-                      <td><?php echo $prod['Nombre']?></td>
-                      <td><?php echo $categorias[$prod['Idcategoria']]['nombre']?></td>
-                      <td><?php echo $marcas[$prod['IdMarca']]['nombre']?></td>
-                      <td><?php echo $prod['Precio']?></td>
-                     
-                      
+                      <td><?php echo $mensaje['id']?></td>
+                      <td><?php echo $mensaje['Nombre']?></td>
+                      <td><?php echo $mensaje['Email']?></td>
+                      <td><?php echo $mensaje['Telefono']?></td>
+                      <td><?php echo $mensaje['Reclamo']?></td>
                       <td>
-                      <a href="productosForm.php?edit=<?php echo $prod['ID'] ?>"><i class="fas fa-pen"></i></a>
-                      <a href="productosListado.php?del=<?php echo $prod['ID'] ?>"><i class="fas fa-trash"></i></a>
+                      <a href="mensajesForm.php?edit=<?php echo $mensaje['id'] ?>"><i class="fas fa-eye"></i></a>
+                      <a href="mensajesListado.php?del=<?php echo $mensaje['id'] ?>"><i class="fas fa-trash"></i></a>
                       </td>
                     </tr>
                     <?php } ?>

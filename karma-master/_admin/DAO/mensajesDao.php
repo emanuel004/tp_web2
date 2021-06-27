@@ -10,21 +10,19 @@ function daoGuardarMensaje($datos = array()){
         'Reclamo' => $datos['Reclamo'],
         'Comentario' => $datos['Comentario']
     ); 
-    $fp = fopen('datos/mensajes.json','w');
+    $fp = fopen('../datos/mensajes.json','w');
     fwrite($fp, json_encode($mensajes));
     fclose($fp);
 
 }
 
 function daoObtenerMensajes(){
-    
-    if(file_exists('datos/mensajes.json')){ 
-        $mensajes = json_decode(file_get_contents('datos/mensajes.json'),TRUE);	
+    if(file_exists('../datos/mensajes.json')){ 
+        $mensajes = json_decode(file_get_contents('../datos/mensajes.json'),TRUE);	
     }else{
         $mensajes = array();
     }
     return $mensajes;
-
 }
 
 function daoObtenerMensaje($id){
@@ -43,15 +41,15 @@ function daoModificarMensaje($datos = array(), $id){
         'Reclamo' => $datos['Reclamo'],
         'Comentario' => $datos['Comentario']
     ); 
-    $fp = fopen('datos/mensajes.json','w');
+    $fp = fopen('../datos/mensajes.json','w');
     fwrite($fp, json_encode($mensajes));
     fclose($fp);
 }
 
-function daoBorrarComentario($id){
+function daoBorrarMensaje($id){
     $mensajes = daoObtenerMensajes(); 
     unset($mensajes[$id]);
-    $fp = fopen('datos/mensajes.json','w');
+    $fp = fopen('../datos/mensajes.json','w');
     fwrite($fp, json_encode($mensajes));
     fclose($fp);
 }
