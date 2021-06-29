@@ -101,7 +101,7 @@
 						?>
 									<div class="review_list">
 										<div class="review_item">
-											<div class="media">
+										<div class="media">
 												<div class="d-flex"><img src="img/product/anonimo.png" alt=""></div>
 												<div class="media-body"><h4><?php echo $comentario['Nombre'] ?></h4></div>
 												<div class="media-body"><h6><?php echo 'Valoracion: '.$comentario['Puntuacion'] ?></h6></div>

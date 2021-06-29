@@ -1,0 +1,17 @@
+{
+    "name": "user/karma-master",
+    "autoload": {
+        "psr-4": {
+            "User\\KarmaMaster\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "emanuel",
+            "email": "ema@ema.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.2"
+    }
+}

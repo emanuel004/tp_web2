@@ -81,7 +81,7 @@ if(isset($_GET['del'])){
                      
                       
                       <td>
-                      <a href="productosForm.php?edit=<?php echo $prod['ID'] ?>"><p>Editar</p></a>
+                      <a href="productosForm.php?edit=<?php echo $prod['ID'] ?>"><i class="fas fa-pen"></i></a>
                       <a href="productosListado.php?del=<?php echo $prod['ID'] ?>"><i class="fas fa-trash"></i></a>
                       </td>
                     </tr>

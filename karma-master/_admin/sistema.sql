@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-06-2021 a las 19:14:48
+-- Tiempo de generación: 29-04-2021 a las 01:36:33
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -29,22 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
-  `usuario` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `nombre` varchar(80) COLLATE utf8_spanish_ci NOT NULL,
-  `edad` int(11) NOT NULL,
+  `usuario` varchar(40) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `nombre` varchar(80)  NOT NULL,
   `tipo_usuario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+);
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `password`, `nombre`, `edad`, `tipo_usuario`) VALUES
-(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Administrador web', 0, 1),
-(2, 'usuario', 'b665e217b51994789b02b1838e730d6b93baa30f', 'Usuario Estandar', 0, 2),
-(3, 'usuario2', '515ab0557a960be2bcc227943c20de357fb5672d', 'Usuario estandar', 0, 2),
-(4, 'usuario3', 'cd016c515962508538b851783fee065726058a4a', 'Usuario Estandar', 0, 2);
+INSERT INTO `usuarios` (`id`, `usuario`, `password`, `nombre`, `tipo_usuario`) VALUES
+(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Administrador web', 1),
+(2, 'usuario', 'b665e217b51994789b02b1838e730d6b93baa30f', 'Usuario Estandar', 2),
+(3, 'usuario2', '515ab0557a960be2bcc227943c20de357fb5672d', 'Usuario estandar', 2),
+(4, 'usuario3', 'cd016c515962508538b851783fee065726058a4a', 'Usuario Estandar', 2);
 
 --
 -- Índices para tablas volcadas

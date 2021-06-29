@@ -11,4 +11,6 @@ function daoObtenerMarcas(){
     return $data;
 
 }
+
+?>
  

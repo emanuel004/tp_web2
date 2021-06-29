@@ -72,6 +72,7 @@ include_once('Business/contactenosBusiness.php');
 					<div class="col-md-6">
 						<div class="form-group">
 							<textarea class="form-control" name="Comentario" id="message" rows="1" placeholder="Ingrese Mensage" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese Mensage'" required></textarea>
+							<input type="hidden" class="form-control" name="Estado" value="Recibido">
 						</div>
 					</div>
 					<div class="col-md-12 text-right">
