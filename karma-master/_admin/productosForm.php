@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 include('inc/header.php');
 include('inc/sidebar.php');
@@ -11,16 +11,15 @@ include('Business/marcasBusiness.php');
 
 if(isset($_POST['submit'])){
   if(!empty($_GET['edit'])){
-    businessModificarProducto($_POST,$_GET['edit']);
+    businessModificarProducto($_POST,$_GET['edit'],$_FILES);
 }else{
-  businessGuardarProducto($_POST);
+  businessGuardarProducto($_POST,$_FILES);
   
 }
   redirect('productosListado.php');
 }
 
-$producto= array(
- "ID" =>"", "Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
+$producto= array("Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
 if(!empty($_GET['edit'])){
   $producto=businessObtenerProducto($_GET['edit']);
 }
@@ -38,7 +37,7 @@ if(!empty($_GET['edit'])){
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Agregar o Editar Productos</h3>
+          <h3 class="card-title">Formulario</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -54,7 +53,7 @@ if(!empty($_GET['edit'])){
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h3 class="card-title">Agregar o Editar Productos</h3>
               </div>                
               <!-- /.card-header -->
               <!-- form start -->
@@ -94,8 +93,8 @@ if(!empty($_GET['edit'])){
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                      <input type="file" name="imagen"  class="custom-file-input" id="exampleInputFile">
-                        <!--<input type="hidden" name="old_imagen" value="" class="custom-file-input" id="exampleInputFile">-->
+						<input type="file" name="imagen" id ="imagen" class="custom-file-input" id="exampleInputFile" onclick="miFunc()">
+                        <!--<input type="hidden" name="old_imagen" value="<php echo $producto['imagen'] ?>" class="custom-file-input" id="exampleInputFile">-->
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
                     </div>
@@ -103,7 +102,6 @@ if(!empty($_GET['edit'])){
                  
                 </div>
                 <!-- /.card-body -->
-
                 <div class="card-footer">
                   <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                 </div>

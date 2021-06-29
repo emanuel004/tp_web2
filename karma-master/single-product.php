@@ -81,6 +81,19 @@
 					<div class="row">
 						<div class="col-lg-6">
 						<?php
+							$puntu = 0;
+							$totalComen = 0;
+							$a = businessObtenerComentarios();
+							foreach($a as $a1){
+								if($a1['IdProducto'] == $_GET['producto']){
+									$puntu = $puntu + $a1['Puntuacion'];
+									$totalComen = $totalComen + 1;
+								}
+							}
+							$total = intval($puntu/$totalComen);
+						?>
+						<h4><?php echo 'Valoracion Producto: '.$total; ?></h4>
+						<?php
 							$coment = businessObtenerComentarios();
 							krsort($coment);
 							foreach($coment as $comentario){
@@ -88,11 +101,13 @@
 						?>
 									<div class="review_list">
 										<div class="review_item">
-											<div class="media">
+										<div class="media">
 												<div class="d-flex"><img src="img/product/anonimo.png" alt=""></div>
 												<div class="media-body"><h4><?php echo $comentario['Nombre'] ?></h4></div>
+												<div class="media-body"><h6><?php echo 'Valoracion: '.$comentario['Puntuacion'] ?></h6></div>
 											</div>
 											<p><?php echo $comentario['Comentario'] ?></p>
+											<hr style="color: #0056b2;" />
 										</div>
 									</div>
 								<?php } ?>
@@ -105,7 +120,7 @@
 									<div class="col-md-12">
 										<h6>Puntuacion</h6>
 										<div class="form-check form-check-inline">
-  											<input class="form-check-input" type="checkbox" name="inlineCheckbox1" value="1">
+  											<input class="form-check-input" type="checkbox" name="Puntuacion" value="1">
   											<label class="form-check-label" for="Puntuacion">1</label>
 										</div>
 										<div class="form-check form-check-inline">
@@ -118,11 +133,11 @@
 										</div>
 										<div class="form-check form-check-inline">
   											<input class="form-check-input" type="checkbox" name="Puntuacion" value="4">
-  											<label class="form-check-label" for="inlineCheckbox3">4</label>
+  											<label class="form-check-label" for="inlineCheckbox4">4</label>
 										</div>
 										<div class="form-check form-check-inline">
   											<input class="form-check-input" type="checkbox" name="Puntuacion" value="5">
-  											<label class="form-check-label" for="inlineCheckbox3" >5</label>
+  											<label class="form-check-label" for="inlineCheckbox5" >5</label>
 										</div>
 									</div>
 									<div class="col-md-12">

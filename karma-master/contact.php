@@ -2,10 +2,12 @@
 $section = "contact";
 include("./include/header.php");
 include_once('Business/contactenosBusiness.php');
+include_once('_admin/business/contactBusiness.php');
 	
 	//de esta forma recibe el port
-	if(isset($_POST['submitCon'])){ 
-		businessGuardarMensaje($_POST);
+	if(!empty($_POST['email'])){ 
+		var_dump($_POST);
+		sendMail($_POST);
 	}
 ?>
 
@@ -72,6 +74,7 @@ include_once('Business/contactenosBusiness.php');
 					<div class="col-md-6">
 						<div class="form-group">
 							<textarea class="form-control" name="Comentario" id="message" rows="1" placeholder="Ingrese Mensage" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese Mensage'" required></textarea>
+							<input type="hidden" class="form-control" name="Estado" value="Recibido">
 						</div>
 					</div>
 					<div class="col-md-12 text-right">
