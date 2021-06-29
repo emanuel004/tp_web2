@@ -1,16 +1,16 @@
 <?php
 
-require "conexcion.php";
+//require "conexcion.php";
 
-session_start();
+//session_start();
 
-if ($_POST) {
+//if ($_POST) {
   //aca reciviendo password y usuario que se inicia
-  $usuario = $_POST['usuario'];
-  $password = $_POST['password'];
+  //$usuario = $_POST['usuario'];
+  //$password = $_POST['password'];
 
   //es una consulta para revisar si el usuario existe
-  $sql = "SELECT id, password, nombre, tipo_usuario FROM usuarios WHERE usuario='$usuario'";
+  /*$sql = "SELECT id, password, nombre, tipo_usuario FROM usuarios WHERE usuario='$usuario'";
 
   //se realiza la ejecucion
   $resultado = $mysqli->query($sql);
@@ -37,7 +37,7 @@ if ($_POST) {
   } else {
     echo "NO existe usuario";
   }
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
