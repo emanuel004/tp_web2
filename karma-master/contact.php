@@ -1,6 +1,6 @@
 <?php
 $section = "contact";
-include("./include/header.php");
+include("include/header.php");
 include_once('Business/contactenosBusiness.php');
 include_once('_admin/business/contactBusiness.php');
 	

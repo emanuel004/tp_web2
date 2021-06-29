@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 	error_reporting(E_ALL);
 
 require_once('../vendor/autoload.php');
-require_once('../config/mail.php');
+require_once('mail.php');
 
 
 function sendMail($data){
