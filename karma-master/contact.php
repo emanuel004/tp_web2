@@ -2,10 +2,12 @@
 $section = "contact";
 include("./include/header.php");
 include_once('Business/contactenosBusiness.php');
+include_once('_admin/business/contactBusiness.php');
 	
 	//de esta forma recibe el port
-	if(isset($_POST['submitCon'])){ 
-		businessGuardarMensaje($_POST);
+	if(!empty($_POST['email'])){ 
+		var_dump($_POST);
+		sendMail($_POST);
 	}
 ?>
 
