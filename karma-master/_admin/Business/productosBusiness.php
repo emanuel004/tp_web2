@@ -38,7 +38,7 @@ function saveImage($datos,$id){
     
         $ruta= '../images/'.$id.'/';
         if(!is_dir($ruta)){
-            mkdir($ruta);
+            mkdir($ruta,0777,true);
         }
         $tamanhos = array(0 => array('nombre'=>'big','ancho'=>'100','alto'=>'200'),
         1 => array('nombre'=>'small','ancho'=>'50','alto'=>'100'));

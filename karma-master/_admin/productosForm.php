@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 include('inc/header.php');
 include('inc/sidebar.php');
@@ -38,7 +38,7 @@ if(!empty($_GET['edit'])){
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Agregar o Editar Productos</h3>
+          <h3 class="card-title">Formulario</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -54,7 +54,7 @@ if(!empty($_GET['edit'])){
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h3 class="card-title">Agregar o Editar Productos</h3>
               </div>                
               <!-- /.card-header -->
               <!-- form start -->
