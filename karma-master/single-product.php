@@ -90,7 +90,8 @@
 									$totalComen = $totalComen + 1;
 								}
 							}
-							$total = intval($puntu/$totalComen);
+							$total = 0;
+							if($totalComen <> 0){$total = intval($puntu/$totalComen);}
 						?>
 						<h4><?php echo 'Valoracion Producto: '.$total; ?></h4>
 						<?php

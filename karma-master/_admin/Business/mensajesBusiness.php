@@ -1,6 +1,8 @@
 <?php
 
 include_once('DAO/mensajesDao.php');
+require_once('../vendor/autoload.php');
+require_once('mail.php');
 
 
 function businessGuardarMensaje($datos = array()){

@@ -8,7 +8,9 @@ function daoGuardarMensaje($datos = array()){
         'Email' => $datos['Email'],
         'Telefono'  => $datos["Telefono"],
         'Reclamo' => $datos['Reclamo'],
-        'Comentario' => $datos['Comentario']
+        'Comentario' => $datos['Comentario'],
+        'Estado' => $datos['Estado'],
+        'Respuesta' => $datos['Respuesta']
     ); 
     $fp = fopen('../datos/mensajes.json','w');
     fwrite($fp, json_encode($mensajes));
@@ -32,17 +34,21 @@ function daoObtenerMensaje($id){
 }
 
 function daoModificarMensaje($datos = array(), $id){
-    $mensajes = daoObtenerComentarios(); 
+    $mensajes = daoObtenerMensajes(); 
     $mensajes[$id] = array(
         'id' => $id,
         'Nombre' => $datos['Nombre'],
         'Email' => $datos['Email'],
         'Telefono'  => $datos["Telefono"],
         'Reclamo' => $datos['Reclamo'],
-        'Comentario' => $datos['Comentario']
+        'Comentario' => $datos['Comentario'],
+        'Estado' => $datos['Estado'],
+        'Respuesta' => $datos['Respuesta']
     ); 
     $fp = fopen('../datos/mensajes.json','w');
     fwrite($fp, json_encode($mensajes));
+    sendMail($datos);
+
     fclose($fp);
 }
 
@@ -53,3 +59,21 @@ function daoBorrarMensaje($id){
     fwrite($fp, json_encode($mensajes));
     fclose($fp);
 }
+
+function sendMail($datos){
+    $transport = (new Swift_SmtpTransport('smtp.gmail.com', 25, 'tls'))
+    ->setUsername('mailprueba135@gmail.com')
+    ->setPAssword('ijfyvfgpoqcdfzex');
+
+    $mailer = new Swift_Mailer($transport);
+
+    $message = (new Swift_Message($datos['Reclamo']))
+        ->setFrom(['gerogome12@gmail.com'])
+        ->setTo($datos['Email'])
+        ->setBody($datos['Respuesta']);
+        //->setContentType("text/html");
+	
+    return $mailer->send($message);
+}
+
+?>

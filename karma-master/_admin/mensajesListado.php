@@ -1,7 +1,7 @@
 <?php
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 include('inc/header.php');
 include('inc/sidebar.php');
@@ -63,6 +63,7 @@ if(isset($_GET['del'])){
                       <th>E-Mail</th>
                       <th>Telefono</th>
                       <th>Reclamo</th>
+                      <th>Estado</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -73,6 +74,7 @@ if(isset($_GET['del'])){
                       <td><?php echo $mensaje['Email']?></td>
                       <td><?php echo $mensaje['Telefono']?></td>
                       <td><?php echo $mensaje['Reclamo']?></td>
+                      <td><?php echo $mensaje['Estado']?></td>
                       <td>
                       <a href="mensajesForm.php?edit=<?php echo $mensaje['id'] ?>"><i class="fas fa-eye"></i></a>
                       <a href="mensajesListado.php?del=<?php echo $mensaje['id'] ?>"><i class="fas fa-trash"></i></a>

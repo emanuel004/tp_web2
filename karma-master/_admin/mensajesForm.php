@@ -10,15 +10,14 @@ include('Business/mensajesBusiness.php');
 
 if(isset($_POST['submit'])){
   if(!empty($_GET['edit'])){
-
-    businessModificarMensaje($_POST,$_GET['edit'],$_FILES);
+    businessModificarMensaje($_POST,$_GET['edit']);
   }else{
     businessGuardarMensaje($_POST,$_FILES);
   }
-  //redirect('productosListado.php');
+  redirect('mensajesListado.php');
 }
 
-$msj= array("Nombre" =>"" ,"Email" =>"","Telefono" =>"","Reclamo" => "", "Comentario" =>"");
+$msj= array("Nombre" =>"" ,"Email" =>"","Telefono" =>"","Reclamo" => "", "Comentario" =>"","Estado"=>"","Respuesta"=>"");
 if(!empty($_GET['edit'])){
   $msj=businessObtenerMensaje($_GET['edit']);
 }
@@ -70,15 +69,21 @@ if(!empty($_GET['edit'])){
                     <label for="exampleInputEmail1">Telefono</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" name="Telefono" value="<?php echo $msj['Telefono'] ?>">
                   </div>
-
                   <div class="form-group">
                     <label for="exampleInputEmail1">Reclamo</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" name="Reclamo" value="<?php echo $msj['Reclamo'] ?>">
                   </div>
-               
                   <div class="form-group">
                     <label for="exampleInputEmail1">Mensaje</label>
                     <textarea  class="form-control"  name="Comentario" ><?php echo $msj['Comentario'] ?></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Respuesta</label>
+                    <textarea  class="form-control"  name="Respuesta" ></textarea>
+                    <input type="hidden" class="form-control" name="Estado" value="Respondido">
+                  </div>
+                  <div class="card-footer">
+                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
               </form>
