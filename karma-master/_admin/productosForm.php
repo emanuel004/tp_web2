@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
   businessGuardarProducto($_POST,$_FILES);
   
 }
-  //redirect('productosListado.php');
+  redirect('productosListado.php');
 }
 
 $producto= array("Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');

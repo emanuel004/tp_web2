@@ -1,6 +1,6 @@
 <?php
 
-function daoGuardarProducto($datos = array(),$archivo){
+function daoGuardarProducto($datos = array(),$archivo = array()){
      $productos = daoObtenerProductos();
      $ID = date('Ymdhisu');
      $productos[$ID] = array(
