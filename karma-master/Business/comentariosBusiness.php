@@ -7,6 +7,7 @@ function businessGuardarComentario($datos = array()){
     daoGuardarComentario($datos);
 }
 
+
 function businessObtenerComentarios(){
     return daoObtenerComentarios();
 }

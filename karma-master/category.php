@@ -25,6 +25,12 @@ include("include/header.php");
 			<div class="col-xl-3 col-lg-4 col-md-5">
 				<div class="sidebar-filter mt-50">
 					<div class="top-filter-head">Product Filters</div>
+					<?php
+						if(!empty($_GET)){ ?>
+							<div class="head">
+								<a href="category.php" class="btn btn-warning">Eliminar Filtros</i></a>
+							</div>
+					<?php ;} ?>
 					<div class="common-filter">
 						<div class="head">Zapatillas</div>
 						<form action="#">
@@ -34,7 +40,6 @@ include("include/header.php");
 								foreach($cat as $cate){?>
 									<li class="filter-list"><a href="category.php?categoria=<?php echo $cate['Id'] ?>&marca=<?php echo (isset($_GET['marca']))?$_GET['marca']:""; ?>"><?php echo $cate['nombre'] ?></a></li>
 								<?php } ?>
-								<li class="filter-list"><a href="category.php?categoria=&marca=<?php echo (isset($_GET['marca']))?$_GET['marca']:""; ?>">Todas</a></li>
 							</ul>
 						</form>
 					</div>
@@ -49,7 +54,6 @@ include("include/header.php");
 								<?php echo $marca['nombre'] ?>
 								</a></li>
 							<?php } ?>
-							<li class="filter-list"><a href="category.php?marca=&categoria=<?php echo (isset($_GET['categoria']))?$_GET['categoria']:""; ?>">Todas</a></li>
 							</ul>
 						</form>
 					</div>

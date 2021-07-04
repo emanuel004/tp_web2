@@ -5,17 +5,25 @@ error_reporting(E_ALL);*/
 
 include('inc/header.php');
 include('inc/sidebar.php');
-include('Business/productosBusiness.php');
-include('Business/categoriasBusiness.php');
 include('Business/marcasBusiness.php');
 
-$marcas = businessObtenerMarcas();
-$categorias = businessObtenerCategorias();
-
 if(isset($_GET['del'])){
-  businessBorrarProducto($_GET['del']);
-  redirect('productosListado.php');
+  businessBorrarMarca($_GET['del']);
+  redirect('marcaListado.php');
 }
+if(isset($_POST['submit'])){
+  if(!empty($_GET['edit'])){
+    businessModificarmarca($_POST,$_GET['edit']);
+  }else{
+    businessGuardarMarca($_POST);
+  }
+  redirect('marcaListado.php');
+}
+$marca= array("nombre" =>"");
+if(!empty($_GET['edit'])){
+  $marca=businessObtenerMarca($_GET['edit']);
+}
+
 ?>
   
   <!-- Content Wrapper. Contains page content -->
@@ -25,12 +33,12 @@ if(isset($_GET['del'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Listado de Productos</h1>
+            <h1>Listado de Marcas</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active">Listado de Productos</li>
+              <li class="breadcrumb-item active">Listado de Marcas</li>
             </ol>
           </div>
         </div>
@@ -43,8 +51,7 @@ if(isset($_GET['del'])){
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Productos <a href="productosForm.php"><i class="fas fa-plus"></i></a></h3>
-
+          <h3 class="card-title">Marca</h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
@@ -55,7 +62,18 @@ if(isset($_GET['del'])){
           </div>
         </div>
         <div class="card-body">
-              <!-- /.row -->
+          <form class="form-inline" method="post">
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="exampleFormControlInput1" class="sr-only">Nombre</label>
+              <input type="text" class="form-control" name = "nombre" value = "<?php if(!empty($_GET['edit'])){echo $marca['nombre'];}?>">
+            </div>
+            <button type="submit" name="submit" class="btn btn-primary mb-2"><?php if(!empty($_GET['edit'])){echo 'Modificar';}else{echo 'Agregar';}?></button>
+            <?php 
+              if(!empty($_GET['edit'])){ ?>
+                  <a href="marcaListado.php" class="btn btn-primary mx-sm-3 mb-2"><i class="fas fa-trash"></i></a>
+            <?php } ?>
+          </form>
+        </div>
         <div class="row">
           <div class="col-12">
             <div class="card">
@@ -66,29 +84,20 @@ if(isset($_GET['del'])){
                     <tr>
                       <th>ID</th>
                       <th>Nombre</th>
-                      <th>Categoria</th>
-                      <th>Marca</th>
-                      <th>Precio</th>
                       <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
-                  <?php foreach(businessObtenerProductos() as $prod ){?>
+                  <?php foreach(businessObtenerMarcas() as $marc ){?>
                     <tr>
-                      <td><?php echo $prod['ID']?></td>
-                      <td><?php echo $prod['Nombre']?></td>
-                      <td><?php echo $categorias[$prod['Idcategoria']]['nombre']?></td>
-                      <td><?php echo $marcas[$prod['IdMarca']]['nombre']?></td>
-                      <td><?php echo $prod['Precio']?></td>
-                     
-                      
+                      <td><?php echo $marc['Id']?></td>
+                      <td><?php echo $marc['nombre']?></td>
                       <td>
-                      <a href="productosForm.php?edit=<?php echo $prod['ID'] ?>"><i class="fas fa-pen"></i></a>
-                      <a href="productosListado.php?del=<?php echo $prod['ID'] ?>"><i class="fas fa-trash"></i></a>
+                      <a href="marcaListado.php?edit=<?php echo $marc['Id'] ?>"><i class="fas fa-pen"></i></a>
+                      <a href="marcaListado.php?del=<?php echo $marc['Id'] ?>"><i class="fas fa-trash"></i></a>
                       </td>
                     </tr>
                     <?php } ?>
-                    
                   </tbody>
                 </table>
               </div>
@@ -96,7 +105,6 @@ if(isset($_GET['del'])){
             </div>
             <!-- /.card -->
           </div>
-        </div>
         </div>
         <!-- /.card-footer-->
       </div>

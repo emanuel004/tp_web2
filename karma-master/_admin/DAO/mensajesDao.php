@@ -61,20 +61,19 @@ function daoBorrarMensaje($id){
 }
 
 function sendMail($datos){
-    $transport = (new Swift_SmtpTransport($GLOBALS['mail_smtp_addr'],$GLOBALS['mail_smtp_port'],'ssl'))
-    ->setUsername($GLOBALS['mail_smtp_user'])
-    ->setPAssword($GLOBALS['mail_smtp_pass']);
+    $transport = (new Swift_SmtpTransport('smtp.gmail.com', 25, 'tls'))
+    ->setUsername('mailprueba135@gmail.com')
+    ->setPAssword('ijfyvfgpoqcdfzex');
 
     $mailer = new Swift_Mailer($transport);
 
-    $message = (new Swift_Message('Contacto desde el Carrito'))
-        ->setFrom([$GLOBALS['mail_smtp_user']=>'Emanuel'])
-        ->setTo(['emanuelzetka@davinci.com.ar'=>'Formulario de contacto de Carrito'])
+    $message = (new Swift_Message($datos['Reclamo']))
+        ->setFrom(['gerogome12@gmail.com'])
+        ->setTo($datos['Email'])
         ->setBody($datos['Respuesta']);
         //->setContentType("text/html");
-
-    var_dump($message);
-    //return $mailer->send($message);
+	
+    return $mailer->send($message);
 }
 
 ?>

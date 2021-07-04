@@ -1,8 +1,8 @@
 <?php
 
-$mail_smtp_addr = 'jayeko9282@paseacuba.com';
+$mail_smtp_addr = 'smtp.gmail.com';
 $mail_smtp_port = '25';
-$mail_smtp_user = 'emanuelzetka@davinci.com.ar';
-$mail_smtp_pass = 'n]3$zM)L+NOa';
+$mail_smtp_user = 'mailprueba135@gmail.com';
+$mail_smtp_pass = 'ijfyvfgpoqcdfzex';
 
 ?>
