@@ -58,6 +58,7 @@
 						<ul class="list">
 							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
 							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
+							<li><a href="#"><span>Cod. Producto</span> : <?php echo $p['ID'] ?></a></li>
 						</ul>
 						<p><?php echo $p['Descripcion'] ?> </p>
 					</div>

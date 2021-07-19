@@ -67,6 +67,9 @@ include_once('Business/contactenosBusiness.php');
 						<div class="form-group">
 							<input type="text" class="form-control" id="subject" name="Reclamo" placeholder="Reclamo/Sugerencia" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Reclamo/Sugerencia'" required>
 						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="subject" name="IdProducto" placeholder="Cod. Producto (ver detalle del producto)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Reclamo/Sugerencia'" required>
+						</div>
 				
 					</div>
 					<div class="col-md-6">

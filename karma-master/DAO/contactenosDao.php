@@ -10,7 +10,8 @@ function daoGuardarMensaje($datos = array()){
         'Reclamo' => $datos['Reclamo'],
         'Comentario' => $datos['Comentario'],
         'Estado' => $datos['Estado'],
-        'Respuesta' => $datos['Respuesta']
+        'Respuesta' => $datos['Respuesta'],
+        'IdProducto' => $datos['IdProducto']
     ); 
     $fp = fopen('datos/mensajes.json','w');
     fwrite($fp, json_encode($mensajes));
