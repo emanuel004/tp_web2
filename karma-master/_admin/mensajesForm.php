@@ -17,6 +17,7 @@ if(isset($_POST['submit'])){
   redirect('mensajesListado.php');
 }
 
+
 $msj= array("Nombre" =>"" ,"Email" =>"","Telefono" =>"","Reclamo" => "", "Comentario" =>"","Estado"=>"","Respuesta"=>"","IdProducto" => "");
 if(!empty($_GET['edit'])){
   $msj=businessObtenerMensaje($_GET['edit']);

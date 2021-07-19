@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
+/*ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+error_reporting(E_ALL);*/
 
 include('inc/header.php');
 include('inc/sidebar.php');
@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
   businessGuardarProducto($_POST,$_FILES);
   
 }
-  redirect('productosListado.php');
+  //redirect('productosListado.php');
 }
 
 $producto= array("Nombre" =>"" ,"Precio" =>"","Idcategoria" =>"","IdMarca" => "", "Descripcion" =>"", "imagen" =>'');
