@@ -55,7 +55,46 @@ if(isset($_GET['del'])){
           </div>
         </div>
         <div class="card-body">
-              <!-- /.row -->
+          <!-- /.row -->
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="inlineCheckbox1">Filtros: </label>
+          </div>
+          <div class="input-group-inline mb-3 form-check form-check-inline">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</button>
+              <div class="dropdown-menu">
+              <?php foreach($categorias as $cate) {?>
+                  <a class="dropdown-item" href ="productosListado.php?categoria=<?php echo $cate['Id'] ?>&marca=<?php echo (isset($_GET['marca']))?$_GET['marca']:""; ?>"><?php echo $cate['nombre'];?></a>
+              <?php } ?>
+              </div>
+            </div>
+          </div>
+          <div class="input-group-inline mb-3 form-check form-check-inline">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Marcas</button>
+              <div class="dropdown-menu">
+              <?php foreach( $marcas as $cate) {?>
+                  <a class="dropdown-item" href ="productosListado.php?marca=<?php echo $cate['Id']?>&categoria=<?php echo (isset($_GET['categoria']))?$_GET['categoria']:""; ?>"><?php echo $cate['nombre'];?></a>
+              <?php } ?>
+              </div>
+            </div>
+          </div>
+          <?php
+						if(!empty($_GET)){ ?>
+              <?php if($_GET["categoria"] != ""){?>
+                  <div class="head form-check form-check-inline">
+								    <span><?php echo $categorias[$_GET["categoria"]]["nombre"]; ?></span>
+							    </div> 
+              <?php } ?>
+              <?php if($_GET["marca"] != ""){?>
+                  <div class="head form-check form-check-inline">
+								    <span><?php echo $marcas[$_GET["marca"]]["nombre"]; ?></span>
+							    </div> 
+              <?php } ?>
+							<div class="head form-check form-check-inline">
+								<a href="productosListado.php" class="btn btn-warning"><i class="fas fa-trash"></i></a>
+							</div>
+					<?php ;} ?>
         <div class="row">
           <div class="col-12">
             <div class="card">
@@ -73,7 +112,18 @@ if(isset($_GET['del'])){
                     </tr>
                   </thead>
                   <tbody>
-                  <?php foreach(businessObtenerProductos() as $prod ){?>
+                  <?php foreach(businessObtenerProductos() as $prod ){
+								      $print = true;
+					
+								      if(!empty($_GET['categoria']) AND $print){
+									      if($prod['Idcategoria'] != $_GET['categoria']) $print = FALSE;
+								      }
+							
+								      if(!empty($_GET['marca']) AND $print){
+									      if($prod['IdMarca'] != $_GET['marca']) $print = FALSE;
+								      }
+							
+								      if($print){ ?>
                     <tr>
                       <td><?php echo $prod['ID']?></td>
                       <td><?php echo $prod['Nombre']?></td>
@@ -87,7 +137,7 @@ if(isset($_GET['del'])){
                       <a href="productosListado.php?del=<?php echo $prod['ID'] ?>"><i class="fas fa-trash"></i></a>
                       </td>
                     </tr>
-                    <?php } ?>
+                    <?php }} ?>
                     
                   </tbody>
                 </table>

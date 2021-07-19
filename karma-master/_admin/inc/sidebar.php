@@ -37,6 +37,18 @@
               <p>Mensajes</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="categoriaListado.php" class="nav-link">
+              <i class="nav-icon far fa-bookmark"></i>
+              <p>Categorias</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="marcaListado.php" class="nav-link">
+              <i class="nav-icon fas fa-tags"></i>
+              <p>Marcas</p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

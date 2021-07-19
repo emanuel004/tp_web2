@@ -17,7 +17,8 @@ if(isset($_POST['submit'])){
   redirect('mensajesListado.php');
 }
 
-$msj= array("Nombre" =>"" ,"Email" =>"","Telefono" =>"","Reclamo" => "", "Comentario" =>"","Estado"=>"","Respuesta"=>"");
+
+$msj= array("Nombre" =>"" ,"Email" =>"","Telefono" =>"","Reclamo" => "", "Comentario" =>"","Estado"=>"","Respuesta"=>"","IdProducto" => "");
 if(!empty($_GET['edit'])){
   $msj=businessObtenerMensaje($_GET['edit']);
 }
@@ -81,6 +82,7 @@ if(!empty($_GET['edit'])){
                     <label for="exampleInputEmail1">Respuesta</label>
                     <textarea  class="form-control"  name="Respuesta" ></textarea>
                     <input type="hidden" class="form-control" name="Estado" value="Respondido">
+                    <input type="hidden" class="form-control" name="Estado" value="<?php echo $msj['IdProducto'] ?>">
                   </div>
                   <div class="card-footer">
                     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
